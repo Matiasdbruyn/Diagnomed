@@ -10,7 +10,7 @@ import { ScrollToTop } from './ScrollToTop';
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Diagnomed">
       <ScrollToTop />
       <Header />
       <Routes>
