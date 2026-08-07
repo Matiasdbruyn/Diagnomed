@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react"
 import "./TercerInicio.css"
-import gineco from "../../../assets/gineco.png"
 import tilde from "../../../assets/tilde.png"
 
 export const TercerInicio = () => {
@@ -27,7 +26,6 @@ export const TercerInicio = () => {
                 backgroundColor: enVista ? "pink" : "transparent",
                 transition: "background-color 1s ease"
             }}>
-            <img src={gineco} alt="" />
             <div>
                 <h1>Jornadas Ginecológicas</h1>
                 <h2>Una jornada mensual junto a nuestra Médica Ginecóloga, <br /> donde podés acceder a los siguientes estudios:</h2>

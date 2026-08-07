@@ -1,19 +1,11 @@
 #jornada {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height: 80vh;
 }
 
-#jornada img {
-    width: 35%;
-    height: 350px;
-}
 
-#jornada div {
-    width: 50%;
-    height: 50%;
-}
 
 #jornada div h1 {
     color: #BA1397;

@@ -13,17 +13,6 @@ export const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h1>Obras Sociales</h1>
-                        <ul>
-                            <li>IOMA 100% de Cobertura</li>
-                            <li>OSPIT</li>
-                            <li>PROSAL</li>
-                            <li>PAMI (Mas Inforacion)</li>
-                            <li>PREPAGAS (Mas Inforacion)</li>
-                            <li>Pacientes  particulares</li>
-                        </ul>
-                    </div>
-                    <div>
                         <h1>Contacto</h1>
                         <ul>
                             <li>11 4914-9441</li>

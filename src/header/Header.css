@@ -5,6 +5,8 @@
     align-items: center;
     position: sticky;
     top: 0;
+    background-color: #ffff;
+    border-radius: 0px 0px 40px 40px;
 }
 
 #header .logo-link img {
@@ -31,7 +33,7 @@
 }
 
 #header ul li a {
-    color: white;
+    color: black;
     list-style: none;
     text-decoration: none;
     display: inline-block;
@@ -39,7 +41,7 @@
 }
 
 #header ul li a:visited {
-    color: white;
+    color: black;
 }
 
 #header ul li a:hover {
@@ -47,6 +49,6 @@
 }
 
 #header ul li a:active {
-    color: white;
+    color: black;
 
 }
