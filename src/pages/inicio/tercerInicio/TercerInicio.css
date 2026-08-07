@@ -1,0 +1,60 @@
+#jornada {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+}
+
+#jornada img {
+    width: 35%;
+    height: 350px;
+}
+
+#jornada div {
+    width: 50%;
+    height: 50%;
+}
+
+#jornada div h1 {
+    color: #BA1397;
+    font-family: "Archivo", sans-serif;
+    text-align: left;
+    font-size: 60px;
+}
+
+#jornada div h2 {
+    width: 90%;
+    color: #BA1397;
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 30px;
+    text-align: left;
+    font-weight: 500;
+    padding: 15px;
+}
+
+#jornada div ul li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #BA1397;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    list-style: none;
+    padding: 5px;
+}
+
+#jornada div ul li img {
+    width: 25px;
+    height: 25px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+#jornada div .aviso {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #BA1397;
+    font-weight: 500;
+    text-align: left;
+    font-size: 45px;
+}

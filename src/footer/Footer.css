@@ -1,0 +1,45 @@
+.sectionFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #008E80;
+    height: 85%;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+#footer #logo {
+    width: 550px;
+    height: 80px;
+}
+
+#footer #informacionFooter {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#footer #informacionFooter h1 {
+    font-family: "Archivo", sans-serif;
+    font-size: 30px;
+    color: #F6F6F6;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+#footer #informacionFooter ul li {
+    font-family: "DM Sans", sans-serif;
+    text-align: left;
+    list-style: none;
+    color: #F6F6F6;
+    padding: 5px;
+}

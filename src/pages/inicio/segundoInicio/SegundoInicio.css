@@ -1,0 +1,23 @@
+#texto {
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: top;
+}
+
+#texto h1 {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    width: 20%;
+    text-align: left;
+    color: #037056;
+}
+
+#texto p {
+    width: 25%;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    color: black;
+}

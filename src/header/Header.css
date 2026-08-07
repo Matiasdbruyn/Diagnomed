@@ -1,0 +1,52 @@
+#header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+#header .logo-link img {
+    border: none;
+    display: inline-block;
+    line-height: 0;
+    width: 420px;
+    height: 420px;
+}
+
+#header ul {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header ul li {
+    font-size: 25px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    list-style: none;
+    padding: 10px;
+}
+
+#header ul li a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+#header ul li a:visited {
+    color: white;
+}
+
+#header ul li a:hover {
+    transform: scale(1.1);
+}
+
+#header ul li a:active {
+    color: white;
+
+}
