@@ -1,0 +1,12 @@
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: red;
+}
+
+.mapa iframe {
+    border: none 0;
+    border-radius: 30px;
+}

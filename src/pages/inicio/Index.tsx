@@ -1,3 +1,5 @@
+import Comentarios from "./comentarios/Comentarios"
+import { Mapa } from "./mapa/Mapa"
 import { PrimerInicio } from "./primerInicio/PrimerInicio"
 import { SegundoInicio } from "./segundoInicio/SegundoInicio"
 import { TercerInicio } from "./tercerInicio/TercerInicio"
@@ -9,6 +11,8 @@ export const Index = () => {
             <PrimerInicio />
             <SegundoInicio />
             <TercerInicio />
+            <Mapa />
+            <Comentarios />
         </div>
     )
 }

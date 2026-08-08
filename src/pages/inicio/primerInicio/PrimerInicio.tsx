@@ -1,5 +1,4 @@
 import "./PrimerInicio.css"
-/*import afuera from "../assets/daigno-afuera.jpg"*/
 import logotipo from "../../../assets/logotipo.png"
 import entrada from "../../../assets/entrada.jpg"
 
@@ -16,8 +15,15 @@ export const PrimerInicio = () => {
                 </div>
                 <p>Estamos en Esquina Av. Rivadavia y Las Heras Ramos Mejía, Zona Oeste (Las Heras 16)</p>
             </div>
-            <div className="div3">
-                <img src={entrada} alt="" />
+            <div className="carrusel-container">
+                <div className="carrusel-track" id="carruselTrack">
+                    <img src={entrada} alt="" />
+                    <img src={entrada} alt="" />
+                    <img src={entrada} alt="" />
+                    <img src={entrada} alt="" />
+                    <img src={entrada} alt="" />
+                    <img src={entrada} alt="" />
+                </div>
             </div>
         </div>
     )
