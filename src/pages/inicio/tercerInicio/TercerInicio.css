@@ -1,52 +1,204 @@
-#jornada {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80vh;
+.prueba-carrusel {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
 }
 
 
+/* ========================= */
+/* VENTANA DEL CARRUSEL */
+/* ========================= */
 
-#jornada div h1 {
+.prueba-ventana {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* ========================= */
+/* TRACK */
+/* ========================= */
+
+.prueba-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* ========================= */
+/* SLIDE */
+/* ========================= */
+
+.prueba-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* ========================= */
+/* CONTENIDO */
+/* ========================= */
+
+.prueba-contenido {
+    width: 40%;
+    text-align: center;
+}
+
+
+/* TÍTULO */
+
+#jornada .prueba-contenido h2 {
     color: #BA1397;
+
     font-family: "Archivo", sans-serif;
+
     text-align: left;
+
     font-size: 60px;
 }
 
-#jornada div h2 {
-    width: 90%;
-    color: #BA1397;
+
+/* TEXTO */
+
+.prueba-contenido p {
+    color: #ED40C4;
+
     font-family: "Archivo Narrow", sans-serif;
-    font-size: 30px;
+
+    font-size: 32px;
+
     text-align: left;
+
     font-weight: 500;
+
     padding: 15px;
 }
 
-#jornada div ul li {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    color: #BA1397;
-    font-family: "DM Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    list-style: none;
-    padding: 5px;
+
+/* ========================= */
+/* LISTA */
+/* ========================= */
+
+.prueba-contenido ul {
+    padding-left: 0;
 }
 
-#jornada div ul li img {
+
+.prueba-contenido ul li {
+    display: flex;
+
+    justify-content: left;
+
+    align-items: center;
+
+    color: #ED40C4;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 300;
+
+    padding: 5px;
+
+    transition: transform 0.8s ease;
+
+    transform-origin: left center;
+}
+
+
+/* HOVER DE LOS LI */
+
+.prueba-contenido ul li:hover {
+    transform: scale(1.2);
+
+    color: #BA1397;
+}
+
+
+/* IMAGEN DEL TILDE */
+
+.prueba-contenido ul li img {
     width: 25px;
+
     height: 25px;
+
     padding-bottom: 5px;
+
     padding-right: 5px;
 }
 
-#jornada div .aviso {
-    font-family: "Archivo Narrow", sans-serif;
-    color: #BA1397;
-    font-weight: 500;
-    text-align: left;
-    font-size: 45px;
+
+/* ========================= */
+/* IMAGEN PRINCIPAL */
+/* ========================= */
+
+.imagen-contenido img {
+    width: 500px;
+
+    height: 500px;
+}
+
+
+/* ========================= */
+/* FLECHAS */
+/* ========================= */
+
+.prueba-flecha {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    padding: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #888;
+
+    font-size: 55px;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: color 0.5s ease;
+}
+
+
+/* HOVER DE LAS FLECHAS */
+
+.prueba-flecha:hover {
+    color: black;
+}
+
+
+/* FLECHA IZQUIERDA */
+
+.prueba-flecha-izquierda {
+    left: 6%;
+}
+
+
+/* FLECHA DERECHA */
+
+.prueba-flecha-derecha {
+    right: 6%;
 }

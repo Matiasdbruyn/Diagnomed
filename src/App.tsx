@@ -4,6 +4,7 @@ import { Footer } from './footer/Footer'
 import { Header } from './header/Header'
 import { Index } from "./pages/inicio/Index";
 import { ScrollToTop } from './ScrollToTop';
+import { Especialidades } from './pages/especialidades/Especialidades'
 
 
 
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/especialidades" element={<Especialidades />} />
       </Routes>
       <Footer />
     </BrowserRouter>
