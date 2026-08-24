@@ -1,0 +1,336 @@
+.contacto-hero {
+    padding: 90px 6% 50px;
+    text-align: center;
+}
+
+.contacto-hero h1 {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #008E80;
+}
+
+.contacto-hero p {
+    margin: 18px auto 0;
+    max-width: 560px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    color: #444;
+}
+
+.contacto-formulario {
+    padding: 0 6% 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.contacto-formulario form {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 26px 30px;
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.contacto-campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contacto-campo--full {
+    grid-column: 1 / -1;
+}
+
+.contacto-campo--vacio {
+    display: none;
+}
+
+.contacto-campo label {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+.contacto-campo label span {
+    font-weight: 400;
+    color: #777;
+}
+
+.contacto-campo input,
+.contacto-campo select,
+.contacto-campo textarea {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    color: #1A1A1A;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+.contacto-campo textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.contacto-campo input:focus,
+.contacto-campo select:focus,
+.contacto-campo textarea:focus {
+    border-color: #008E80;
+}
+
+.contacto-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.contacto-enviar button {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #008E80;
+    border: none;
+    border-radius: 999px;
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto-enviar button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 142, 128, 0.25);
+}
+
+.contacto-ayuda {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin: 16px 0 0;
+    max-width: 480px;
+}
+
+.contacto-email-alt {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    color: #008E80;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-top: 10px;
+}
+
+.contacto-comunidad {
+    padding: 0 6% 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.contacto-comunidad-card {
+    width: 100%;
+    max-width: 900px;
+    background-color: #008E80;
+    border-radius: 50px;
+    padding: 60px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contacto-comunidad-card h2 {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.contacto-comunidad-card p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    color: #F6F6F6;
+    max-width: 520px;
+    margin: 16px auto 0;
+}
+
+.contacto-comunidad-boton {
+    display: inline-block;
+    margin-top: 30px;
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #008E80;
+    background-color: #ffffff;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 16px 40px;
+    transition: transform 0.25s ease;
+}
+
+.contacto-comunidad-boton:hover {
+    transform: scale(1.04);
+}
+
+.contacto-faq {
+    padding: 0 6% 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-faq h2 {
+    font-family: "Archivo", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 40px;
+}
+
+.contacto-faq-lista {
+    width: 100%;
+    max-width: 800px;
+}
+
+.contacto-faq-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.contacto-faq-item:first-child {
+    border-top: 1px solid #e5e5e5;
+}
+
+.contacto-faq-pregunta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 24px 4px;
+    text-align: left;
+}
+
+.contacto-faq-pregunta span:first-child {
+    font-family: "Archivo", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.contacto-faq-icono {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #EAF5F3;
+    color: #008E80;
+    font-family: "Archivo", sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease;
+}
+
+.contacto-faq-item--abierta .contacto-faq-icono {
+    background-color: #008E80;
+    color: #ffffff;
+}
+
+.contacto-faq-respuesta {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    margin: 0 0 24px;
+    padding: 0 4px;
+    max-width: 700px;
+}
+
+@media (max-width: 720px) {
+    .contacto-hero {
+        padding: 70px 6% 40px;
+    }
+    .contacto-hero h1 {
+        font-size: 38px;
+    }
+    .contacto-formulario form {
+        grid-template-columns: 1fr;
+        padding: 32px 24px;
+        border-radius: 24px;
+    }
+    .contacto-comunidad-card {
+        padding: 40px 28px;
+        border-radius: 32px;
+    }
+    .contacto-comunidad-card h2 {
+        font-size: 28px;
+    }
+    .contacto-faq h2 {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 800px) {
+    .contacto-hero {
+        padding: 70px 6% 40px;
+    }
+    .contacto-hero h1 {
+        font-size: 42px;
+    }
+    .contacto-formulario form {
+        grid-template-columns: 1fr;
+        padding: 36px 28px;
+    }
+    .contacto-comunidad-card {
+        padding: 44px 32px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+    .contacto-hero {
+        padding: 60px 6% 32px;
+    }
+    .contacto-hero h1 {
+        font-size: 30px;
+    }
+    .contacto-hero p {
+        font-size: 16px;
+    }
+    .contacto-formulario form {
+        grid-template-columns: 1fr;
+        padding: 28px 20px;
+        border-radius: 20px;
+    }
+    .contacto-comunidad-card {
+        padding: 32px 22px;
+        border-radius: 26px;
+    }
+    .contacto-comunidad-card h2 {
+        font-size: 24px;
+    }
+    .contacto-comunidad-boton {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .contacto-faq h2 {
+        font-size: 24px;
+    }
+    .contacto-faq-pregunta span:first-child {
+        font-size: 15px;
+    }
+}

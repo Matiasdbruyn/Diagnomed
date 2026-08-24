@@ -1,30 +1,38 @@
 import { useEffect, useRef, useState } from "react";
 import "./TercerInicio.css";
-import entrada from "../../../assets/entrada.jpg";
-import tilde from "../../../assets/tilde.png";
+import gineco2 from "../../../assets/gineco2.jpg";
+import clinicaMedica3 from "../../../assets/clinicaMedica3.jpg";
 
 const slides = [
     {
         titulo: "Jornadas Ginecológicas",
         texto:
-            "Una jornada mensual junto a nuestra Médica Ginecóloga, donde podés acceder a los siguientes estudios:",
-        imagen: entrada,
+            "Una jornada mensual junto a nuestras ginecólogas con consultas y estudios ginecológicos en la mismo día:",
+        imagen: gineco2,
         color: "#FFE9F2",
-        mostrarLista: true,
+        colorTitulo: "#BA1397",
+        colorTexto: "#ED40C4",
+        lista: [
+            "Consulta ginecológica",
+            "Colposcopía y Papanicolau",
+            "Mamografía",
+            "Ecografía mamaria y axilar",
+        ],
     },
     {
-        titulo: "Segundo título",
+        titulo: "Jornada de Chequeos Médicos",
         texto:
-            "Este es el contenido del segundo slide.",
-        imagen: entrada,
+            "Una jornada pensada para ponerte al día con tu salud general, con consultas de clínica médica y estudios básicos de control como:",
+        imagen: clinicaMedica3,
         color: "#BDE0FE",
-    },
-    {
-        titulo: "Tercer título",
-        texto:
-            "Este es el contenido del tercer slide.",
-        imagen: entrada,
-        color: "#CDECCF",
+        colorTitulo: "#0B4F8A",
+        colorTexto: "#1E7FD6",
+        lista: [
+            "Consulta de clínica médica",
+            "Electrocardiograma",
+            "Radiografía de tórax",
+            "Ecografías abdominal y tiroides",
+        ],
     },
 ];
 
@@ -32,15 +40,11 @@ export const TercerInicio = () => {
     const [indice, setIndice] = useState(0);
 
     const siguiente = () => {
-        if (indice < slides.length - 1) {
-            setIndice(indice + 1);
-        }
+        setIndice((actual) => Math.min(actual + 1, slides.length - 1));
     };
 
     const anterior = () => {
-        if (indice > 0) {
-            setIndice(indice - 1);
-        }
+        setIndice((actual) => Math.max(actual - 1, 0));
     };
 
     const jornadaRef = useRef<HTMLDivElement>(null);
@@ -54,13 +58,15 @@ export const TercerInicio = () => {
             }
         );
 
-        if (jornadaRef.current) {
-            observer.observe(jornadaRef.current);
+        const elementoActual = jornadaRef.current;
+
+        if (elementoActual) {
+            observer.observe(elementoActual);
         }
 
         return () => {
-            if (jornadaRef.current) {
-                observer.unobserve(jornadaRef.current);
+            if (elementoActual) {
+                observer.unobserve(elementoActual);
             }
         };
     }, []);
@@ -109,8 +115,15 @@ export const TercerInicio = () => {
                             </div>
 
                             {/* CONTENIDO */}
-                            <div className="prueba-contenido">
-
+                            <div
+                                className="prueba-contenido"
+                                style={
+                                    {
+                                        "--color-titulo": slide.colorTitulo,
+                                        "--color-texto": slide.colorTexto,
+                                    } as React.CSSProperties
+                                }
+                            >
                                 <h2>
                                     {slide.titulo}
                                 </h2>
@@ -119,48 +132,14 @@ export const TercerInicio = () => {
                                     {slide.texto}
                                 </p>
 
-                                {/* LISTA SOLO PARA EL SLIDE QUE TENGA mostrarLista: true */}
-                                {slide.mostrarLista && (
+                                {/* LISTA PROPIA DE CADA SLIDE */}
+                                {slide.lista && (
                                     <ul>
-                                        <li>
-                                            <img
-                                                src={tilde}
-                                                alt=""
-                                            />
-                                            Consulta ginecológica
-                                        </li>
-
-                                        <li>
-                                            <img
-                                                src={tilde}
-                                                alt=""
-                                            />
-                                            Colposcopía y Papanicolau
-                                        </li>
-
-                                        <li>
-                                            <img
-                                                src={tilde}
-                                                alt=""
-                                            />
-                                            Mamografía
-                                        </li>
-
-                                        <li>
-                                            <img
-                                                src={tilde}
-                                                alt=""
-                                            />
-                                            Ecografía mamaria y axilar
-                                        </li>
-
-                                        <li>
-                                            <img
-                                                src={tilde}
-                                                alt=""
-                                            />
-                                            Densitometría ósea (si la indica el profesional)
-                                        </li>
+                                        {slide.lista.map((item, i) => (
+                                            <li key={i}>
+                                                - {item}
+                                            </li>
+                                        ))}
                                     </ul>
                                 )}
 

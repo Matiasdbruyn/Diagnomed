@@ -11,8 +11,8 @@ export const Index = () => {
             <PrimerInicio />
             <SegundoInicio />
             <TercerInicio />
-            <Mapa />
             <Comentarios />
+            <Mapa />
         </div>
     )
 }

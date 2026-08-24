@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+.informacion--primera {
+    padding-top: 140px;
+}
+
 .informacion h1 {
     font-family: "Archivo", sans-serif;
     font-size: 45px;
@@ -17,7 +21,7 @@
 
 .informacion-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
     width: 100%;
     max-width: 1400px;
@@ -26,27 +30,16 @@
 
 .tarjeta {
     min-height: 220px;
-
     padding: 30px;
-
     box-sizing: border-box;
-
     background: #f5f5f5;
-
     border-radius: 12px;
-
     cursor: pointer;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
-
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
@@ -54,7 +47,6 @@
 
 .tarjeta:hover {
     transform: translateY(-5px);
-
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.12);
 }
@@ -64,7 +56,6 @@
     margin: 0 0 15px;
     white-space: pre-line;
     font-size: 24px;
-
     color: #222;
 }
 
@@ -80,88 +71,94 @@
     color: #037056;
 }
 
+.tarjeta-icono {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-icono img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tarjeta-icono:empty {
+    border-radius: 50%;
+    border: 2px dashed rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta--especialidad h3 {
+    color: #008E80;
+}
+
+.tarjeta--especialidad .tarjeta-icono:empty {
+    border-color: rgba(0, 142, 128, 0.35);
+}
+
+.tarjeta--estudio h3 {
+    color: #2E579E;
+}
+
+.tarjeta--estudio .tarjeta-icono:empty {
+    border-color: rgba(46, 87, 158, 0.35);
+}
+
 .informacion-overlay {
     position: fixed;
-
     inset: 0;
-
     z-index: 1000;
-
     display: flex;
-
-    align-items: center;
-
+    align-items: flex-start;
     justify-content: center;
-
-    padding: 30px;
-
+    padding: 160px 30px 30px;
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0.45);
-
     backdrop-filter: blur(8px);
-
     -webkit-backdrop-filter: blur(8px);
-
     animation: aparecerFondo 0.3s ease forwards;
 }
 
 @keyframes aparecerFondo {
     from {
         opacity: 0;
-
         backdrop-filter: blur(0);
-
         -webkit-backdrop-filter: blur(0);
     }
-
     to {
         opacity: 1;
-
         backdrop-filter: blur(8px);
-
         -webkit-backdrop-filter: blur(8px);
     }
 }
 
 .informacion-modal {
     position: relative;
-
     width: 80%;
-
     max-width: 1000px;
-
     min-height: 450px;
-
     padding: 60px;
-
     box-sizing: border-box;
-
     background: white;
-
     border-radius: 20px;
-
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.25);
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     animation: aparecerModal 0.4s ease forwards;
 }
 
 @keyframes aparecerModal {
     from {
         opacity: 0;
-
         transform: scale(0.85);
     }
-
     to {
         opacity: 1;
-
         transform: scale(1);
     }
 }
@@ -169,11 +166,8 @@
 .informacion-modal h2 {
     font-family: "Archivo", sans-serif;
     margin: 0 0 25px;
-
     font-size: 40px;
-
     font-weight: 600;
-
     color: #222;
 }
 
@@ -181,47 +175,72 @@
 .informacion-modal p {
     font-family: "Archivo", sans-serif;
     margin: 0;
-
     max-width: 800px;
-
     font-size: 19px;
-
     line-height: 1.7;
-
     color: #555;
+}
+
+.informacion-modal--especialidad h2 {
+    color: #008E80;
+}
+
+.informacion-modal--estudio h2 {
+    color: #2E579E;
+}
+
+.informacion-agenda {
+    display: inline-block;
+    margin-top: 28px;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 32px;
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.informacion-modal--especialidad .informacion-agenda {
+    background-color: #008E80;
+}
+
+.informacion-modal--estudio .informacion-agenda {
+    background-color: #2E579E;
+}
+
+.informacion-agenda:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.informacion-modal div img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center 60%;
+    padding-bottom: 20px;
 }
 
 .informacion-cerrar {
     position: absolute;
-
     top: 20px;
-
     right: 25px;
-
     width: 40px;
-
     height: 40px;
-
     padding: 0;
-
     border: none;
-
     background: transparent;
-
     color: #777;
-
     font-size: 38px;
-
     line-height: 1;
-
     cursor: pointer;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     transition: color 0.2s ease;
 }
 
@@ -232,7 +251,7 @@
 
 @media (max-width: 900px) {
     .informacion-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -240,27 +259,57 @@
     .informacion {
         padding: 50px 20px;
     }
-
     .informacion-grid {
         grid-template-columns: 1fr;
     }
-
     .informacion-overlay {
         padding: 20px;
     }
-
     .informacion-modal {
         width: 95%;
-
         min-height: 400px;
-
         padding: 40px 25px;
     }
-
     .informacion-modal h2 {
         font-size: 30px;
     }
+    .informacion-modal p {
+        font-size: 16px;
+    }
+}
 
+@media (min-width: 431px) and (max-width: 800px) {
+    .informacion {
+        padding: 60px 5%;
+    }
+    .informacion-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .informacion-overlay {
+        align-items: flex-start;
+        padding-top: 195px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+    .informacion {
+        padding: 50px 20px;
+    }
+    .informacion-grid {
+        grid-template-columns: 1fr;
+    }
+    .informacion-overlay {
+        align-items: flex-start;
+        padding: 190px 20px 20px;
+    }
+    .informacion-modal {
+        width: 95%;
+        min-height: 400px;
+        padding: 40px 25px;
+    }
+    .informacion-modal h2 {
+        font-size: 30px;
+    }
     .informacion-modal p {
         font-size: 16px;
     }

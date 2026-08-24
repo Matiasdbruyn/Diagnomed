@@ -6,9 +6,9 @@
 }
 
 
-/* ========================= */
-/* VENTANA DEL CARRUSEL */
-/* ========================= */
+
+
+
 
 .prueba-ventana {
     width: 100%;
@@ -17,9 +17,9 @@
 }
 
 
-/* ========================= */
-/* TRACK */
-/* ========================= */
+
+
+
 
 .prueba-track {
     display: flex;
@@ -29,25 +29,24 @@
 }
 
 
-/* ========================= */
-/* SLIDE */
-/* ========================= */
+
+
+
 
 .prueba-slide {
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
-
+    box-sizing: border-box;
     display: flex;
-
     align-items: center;
     justify-content: space-evenly;
 }
 
 
-/* ========================= */
-/* CONTENIDO */
-/* ========================= */
+
+
+
 
 .prueba-contenido {
     width: 40%;
@@ -55,39 +54,31 @@
 }
 
 
-/* TÍTULO */
+
 
 #jornada .prueba-contenido h2 {
-    color: #BA1397;
-
-    font-family: "Archivo", sans-serif;
-
+    color: var(--color-titulo, #BA1397);
+    font-family: "Archivo Narrow", sans-serif;
     text-align: left;
-
     font-size: 60px;
 }
 
 
-/* TEXTO */
+
 
 .prueba-contenido p {
-    color: #ED40C4;
-
-    font-family: "Archivo Narrow", sans-serif;
-
-    font-size: 32px;
-
+    color: var(--color-texto, #ED40C4);
+    font-family: "Archivo", sans-serif;
+    font-size: 30px;
     text-align: left;
-
     font-weight: 500;
-
-    padding: 15px;
+    padding: 15px 0px 15px 0px;
 }
 
 
-/* ========================= */
-/* LISTA */
-/* ========================= */
+
+
+
 
 .prueba-contenido ul {
     padding-left: 0;
@@ -96,109 +87,176 @@
 
 .prueba-contenido ul li {
     display: flex;
-
     justify-content: left;
-
     align-items: center;
-
-    color: #ED40C4;
-
+    color: var(--color-texto, #ED40C4);
     font-family: "DM Sans", sans-serif;
-
     font-size: 20px;
-
     font-weight: 300;
-
     padding: 5px;
-
-    transition: transform 0.8s ease;
-
+    transition: transform 0.8s ease, color 0.3s ease;
     transform-origin: left center;
 }
 
 
-/* HOVER DE LOS LI */
+
 
 .prueba-contenido ul li:hover {
     transform: scale(1.2);
-
-    color: #BA1397;
+    color: var(--color-titulo, #BA1397);
 }
 
 
-/* IMAGEN DEL TILDE */
 
-.prueba-contenido ul li img {
-    width: 25px;
 
-    height: 25px;
 
-    padding-bottom: 5px;
-
-    padding-right: 5px;
+.imagen-contenido {
+    width: auto;
 }
-
-
-/* ========================= */
-/* IMAGEN PRINCIPAL */
-/* ========================= */
 
 .imagen-contenido img {
-    width: 500px;
-
-    height: 500px;
+    width: 650px;
+    height: 450px;
+    border-radius: 20px;
 }
 
 
-/* ========================= */
-/* FLECHAS */
-/* ========================= */
+
+
+
 
 .prueba-flecha {
     position: absolute;
-
     top: 50%;
-
     transform: translateY(-50%);
-
     z-index: 10;
-
     padding: 10px;
-
     border: none;
-
     background: transparent;
-
     color: #888;
-
     font-size: 55px;
-
     font-weight: 300;
-
     line-height: 1;
-
     cursor: pointer;
-
     transition: color 0.5s ease;
 }
 
 
-/* HOVER DE LAS FLECHAS */
+
 
 .prueba-flecha:hover {
     color: black;
 }
 
 
-/* FLECHA IZQUIERDA */
+
 
 .prueba-flecha-izquierda {
     left: 6%;
 }
 
 
-/* FLECHA DERECHA */
+
 
 .prueba-flecha-derecha {
     right: 6%;
+}
+
+@media (min-width: 431px) and (max-width: 800px) {
+    .prueba-carrusel {
+        height: auto;
+        padding: 50px 0;
+    }
+    .prueba-ventana {
+        height: auto;
+    }
+    .prueba-track {
+        height: auto;
+    }
+    .prueba-slide {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 0 40px;
+    }
+    .imagen-contenido img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+    .prueba-contenido {
+        width: 100%;
+        text-align: left;
+    }
+    #jornada .prueba-contenido h2 {
+        font-size: 36px;
+        text-align: left;
+    }
+    .prueba-contenido p {
+        font-size: 20px;
+    }
+    .prueba-contenido ul li {
+        font-size: 17px;
+    }
+    .prueba-flecha {
+        font-size: 40px;
+    }
+    .prueba-flecha-izquierda {
+        left: 2%;
+    }
+    .prueba-flecha-derecha {
+        right: 2%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+    .prueba-carrusel {
+        height: auto;
+        padding: 40px 0;
+    }
+    .prueba-ventana {
+        height: auto;
+    }
+    .prueba-track {
+        height: auto;
+    }
+    .prueba-slide {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        padding: 0 30px;
+    }
+    .imagen-contenido img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+    .prueba-contenido {
+        width: 100%;
+        text-align: left;
+    }
+    #jornada .prueba-contenido h2 {
+        font-size: 26px;
+        text-align: left;
+    }
+    .prueba-contenido p {
+        font-size: 16px;
+    }
+    .prueba-contenido ul li {
+        font-size: 14px;
+    }
+    .prueba-flecha {
+        font-size: 32px;
+        padding: 6px;
+    }
+    .prueba-flecha-izquierda {
+        left: 1%;
+    }
+    .prueba-flecha-derecha {
+        right: 1%;
+    }
 }

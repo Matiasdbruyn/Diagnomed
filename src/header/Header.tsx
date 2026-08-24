@@ -13,17 +13,6 @@ export const Header = () => {
     };
 
 
-    const scrollToFooter = () => {
-        const footer = document.getElementById("footer");
-
-        if (footer) {
-            footer.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    };
-
-
     return (
         <section id="header">
 
@@ -49,19 +38,23 @@ export const Header = () => {
 
 
                 <li>
-                    <Link to="/especialidades">
+                    <Link
+                        to="/especialidades"
+                        onClick={scrollToTop}
+                    >
                         Especialidades
                     </Link>
                 </li>
 
 
                 <li>
-                    <button
-                        onClick={scrollToFooter}
+                    <Link
+                        to="/contacto"
+                        onClick={scrollToTop}
                         className="contacto-button"
                     >
                         Contacto
-                    </button>
+                    </Link>
                 </li>
 
             </ul>

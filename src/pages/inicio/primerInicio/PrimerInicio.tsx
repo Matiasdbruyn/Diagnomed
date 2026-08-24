@@ -1,5 +1,4 @@
 import "./PrimerInicio.css";
-import logotipo from "../../../assets/logotipo.png";
 import entrada from "../../../assets/entrada.jpg";
 import esquina from "../../../assets/esquina.jpg";
 import ioma from "../../../assets/ioma.jpeg";
@@ -12,21 +11,31 @@ export const PrimerInicio = () => {
         <div className="parent">
 
             <div className="div1">
-                <h1>!!!!!!!!!!!!!!!!!!!</h1>
+                <h1>Cuidamos tu salud de manera integral</h1>
+                <p>Somos un <span>centro médico de Ramos Mejía </span><br />
+                    donde vas a encontrar todas las especialidades <br />
+                    y estudios que necesitás.
+                </p>
             </div>
 
             <div className="div2">
-                <div className="reserva">
-                    <h1>
-                        Reservá tu turno.
-                        <br />
-                        <span>
-                            Estudios, controles y consultas. Todo en Diagnomed.
-                        </span>
-                    </h1>
 
-                    <img src={logotipo} alt="" />
+                <div className="reserva">
+                    <h1>Tus chequeos médicos y más</h1>
+                    <a
+                        href="https://v2.soloturnos.com/empresa/diagnome"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Solicitá tu turno acá
+                    </a>
                 </div>
+
+                <div className="donde">
+                    <h2>¿Dónde?</h2>
+                    <p>Esquina Av. Rivadavia <br /> y Las Heras, Ramos <br /> Mejía - Zona Oeste</p>
+                </div>
+
             </div>
 
             <div className="carrusel-container">
