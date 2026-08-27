@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Especialidades.css";
 
-// Fotos
 import fotoClinicaMedica from "../../assets/clinica_médica.jpg"
 import fotoGinecologia from "../../assets/gineco.jpg"
 import fotoTraumatologia from "../../assets/traumato.jpg"
@@ -22,7 +21,6 @@ import fotoEcografias from "../../assets/ecografias.jpg"
 import fotoHolter from "../../assets/holter.jpg"
 import fotoPresurometria from "../../assets/presurometria.jpg"
 
-// Íconos
 import iconoOtorrinolaringologia from "../../assets/icons/otorrinolaringologia.png"
 import iconoClinicaMedica from "../../assets/icons/clinicaMedica.png"
 import iconoTraumatologia from "../../assets/icons/traumatologia.png"
@@ -35,6 +33,14 @@ import iconoNefrologia from "../../assets/icons/nefrologia.png"
 import iconoEcografias from "../../assets/icons/ecografias.png"
 import iconoHolter from "../../assets/icons/holter.png"
 import iconoEcocardiograma from "../../assets/icons/ecocardiograma.png"
+import iconoFlebologia from "../../assets/icons/flebo.png"
+import iconoKine from "../../assets/icons/kine.png"
+import iconoMapa from "../../assets/icons/mapa.png"
+import iconoDoppler from "../../assets/icons/doppler.png"
+import iconoRadio from "../../assets/icons/radiografia.png"
+import iconoMamo from "../../assets/icons/mamografia.png"
+import iconoPunciones from "../../assets/icons/punciones.png"
+
 
 type Categoria = "especialidad" | "estudio"
 
@@ -48,7 +54,6 @@ type Tarjeta = {
 };
 
 const tarjetas: Tarjeta[] = [
-    // ===== ESPECIALIDADES =====
     {
         id: 1,
         categoria: "especialidad",
@@ -63,7 +68,7 @@ const tarjetas: Tarjeta[] = [
         categoria: "especialidad",
         titulo: "Clínica Médica",
         descripcion:
-            "Atiende problemas generales, controles y chequeos. Si no sabés a qué especialista ir, empezá por acá.",
+            "Atiende problemas generales, controles y chequeos. \n Si no sabés a qué especialista ir, empezá por acá.",
         imagen: fotoClinicaMedica,
         icono: iconoClinicaMedica,
     },
@@ -93,6 +98,7 @@ const tarjetas: Tarjeta[] = [
             "Cuida tu corazón con estudios como electrocardiograma, ecocardiograma y Doppler cardíaco. Clave para prevenir y controlar la presión.",
         imagen: fotoCardiologia,
         icono: iconoCardiologia,
+
     },
     {
         id: 6,
@@ -101,7 +107,7 @@ const tarjetas: Tarjeta[] = [
         descripcion:
             "Cuida el corazón de los más chicos, desde el control preventivo hasta el seguimiento de soplos o antecedentes familiares adaptados a cada edad.",
         imagen: fotoCardiologiaInfantil,
-        // TODO: sumar ícono cuando llegue el de la carpeta de la familia
+        icono: iconoCardiologia,
     },
     {
         id: 7,
@@ -126,7 +132,7 @@ const tarjetas: Tarjeta[] = [
         categoria: "especialidad",
         titulo: "Reumatología",
         descripcion:
-            "Trata dolores articulares, musculares y enfermedades como la artritis. Consultá si el dolor se repite o te limita en el día a día.",
+            "Trata dolores articulares, musculares y enfermedades como la artritis. \n Consultá si el dolor se repite o te limita en el día a día.",
         imagen: fotoReumatologia,
         icono: iconoReumatologia,
     },
@@ -137,7 +143,7 @@ const tarjetas: Tarjeta[] = [
         descripcion:
             "Se ocupa de la salud de tus venas: várices, piernas cansadas, hinchazón y problemas de circulación.",
         imagen: fotoFlebologia,
-        // TODO: sumar ícono cuando llegue el de la carpeta de la familia
+        icono: iconoFlebologia,
     },
     {
         id: 11,
@@ -153,18 +159,17 @@ const tarjetas: Tarjeta[] = [
         categoria: "especialidad",
         titulo: "Kinesiología",
         descripcion:
-            "Te ayuda a recuperar el movimiento después de una lesión, cirugía o dolor crónico. La atención se coordina por lista de espera para asegurar continuidad en el tratamiento.",
+            "Te ayuda a recuperar el movimiento después de una lesión, cirugía o dolor crónico. \n La atención se coordina por lista de espera para asegurar continuidad en el tratamiento.",
         imagen: fotoKinesiologia,
-        // TODO: sumar ícono cuando llegue el de la carpeta de la familia
+        icono: iconoKine,
     },
 
-    // ===== ESTUDIOS =====
     {
         id: 13,
         categoria: "estudio",
         titulo: "Ecografías",
         descripcion:
-            "Estudio que usa ondas de sonido para ver por dentro, sin radiación y sin dolor. Se aplica a abdomen, riñones, tiroides, mamas y más zonas.",
+            "Estudio que usa ondas de sonido para ver por dentro, sin radiación y sin dolor. \n Se aplica a abdomen, riñones, tiroides, mamas y más zonas.",
         imagen: fotoEcografias,
         icono: iconoEcografias,
     },
@@ -175,7 +180,7 @@ const tarjetas: Tarjeta[] = [
         descripcion:
             "Registra tu presión arterial durante 24 horas. Detecta variaciones que una sola medición en el consultorio no llega a mostrar.",
         imagen: fotoPresurometria,
-        // TODO: sumar ícono cuando llegue el de la carpeta de la familia
+        icono: iconoMapa,
     },
     {
         id: 15,
@@ -193,7 +198,7 @@ const tarjetas: Tarjeta[] = [
         descripcion:
             "Una imagen rápida de huesos y órganos internos. Es clave para diagnosticar fracturas, dolores o problemas respiratorios.",
         imagen: fotoRadiologia,
-        // TODO: sumar ícono cuando llegue el de la carpeta de la familia
+        icono: iconoRadio,
     },
     {
         id: 17,
@@ -211,7 +216,7 @@ const tarjetas: Tarjeta[] = [
         descripcion:
             "Evalúa cómo circula la sangre por las venas y arterias de brazos y piernas.",
         imagen: fotoDopplerPeriferico,
-        // TODO: sumar ícono cuando llegue el de la carpeta de la familia
+        icono: iconoDoppler,
     },
     {
         id: 19,
@@ -220,7 +225,7 @@ const tarjetas: Tarjeta[] = [
         descripcion:
             "Estudia las arterias que llevan sangre al cerebro para detectar obstrucciones a tiempo.",
         imagen: fotoDopplerCuello,
-        // TODO: sumar ícono cuando llegue el de la carpeta de la familia
+        icono: iconoDoppler,
     },
     {
         id: 20,
@@ -229,7 +234,7 @@ const tarjetas: Tarjeta[] = [
         descripcion:
             "Es un estudio de mayor complejidad que requiere una orden médica específica. Antes de darte el turno revisamos la indicación para asegurarnos de que esté todo correcto.",
         imagen: fotoEstudio,
-        // TODO: sumar ícono cuando llegue el de la carpeta de la familia
+        icono: iconoPunciones,
     },
     {
         id: 21,
@@ -238,7 +243,7 @@ const tarjetas: Tarjeta[] = [
         descripcion:
             "Detecta cambios en la mama mucho antes de que puedan sentirse al tacto. Dura pocos minutos y, si bien puede resultar incómodo, la molestia es breve y el estudio es clave para cuidarte a tiempo.",
         imagen: fotoEstudio,
-        // TODO: sumar ícono cuando llegue el de la carpeta de la familia
+        icono: iconoMamo,
     },
 ];
 

@@ -54,7 +54,10 @@
 .tarjeta h3 {
     font-family: "Archivo", sans-serif;
     margin: 0 0 15px;
+    width: 100%;
+    min-width: 0;
     white-space: pre-line;
+    overflow-wrap: break-word;
     font-size: 24px;
     color: #222;
 }
@@ -116,6 +119,7 @@
     justify-content: center;
     padding: 160px 30px 30px;
     box-sizing: border-box;
+    overflow-y: auto;
     background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -174,11 +178,13 @@
 
 .informacion-modal p {
     font-family: "Archivo", sans-serif;
-    margin: 0;
+    margin: 0 auto;
     max-width: 800px;
     font-size: 19px;
-    line-height: 1.7;
+    line-height: 1.5;
     color: #555;
+    text-align: center;
+    white-space: pre-line;
 }
 
 .informacion-modal--especialidad h2 {
@@ -270,6 +276,9 @@
         min-height: 400px;
         padding: 40px 25px;
     }
+    .informacion-modal div img {
+        height: 160px;
+    }
     .informacion-modal h2 {
         font-size: 30px;
     }
@@ -287,7 +296,13 @@
     }
     .informacion-overlay {
         align-items: flex-start;
-        padding-top: 195px;
+        padding-top: 130px;
+    }
+    .informacion-modal {
+        padding: 45px 35px;
+    }
+    .informacion-modal div img {
+        height: 220px;
     }
 }
 
@@ -300,12 +315,15 @@
     }
     .informacion-overlay {
         align-items: flex-start;
-        padding: 190px 20px 20px;
+        padding: 120px 20px 20px;
     }
     .informacion-modal {
         width: 95%;
         min-height: 400px;
-        padding: 40px 25px;
+        padding: 35px 22px;
+    }
+    .informacion-modal div img {
+        height: 160px;
     }
     .informacion-modal h2 {
         font-size: 30px;

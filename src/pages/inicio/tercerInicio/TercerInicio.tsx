@@ -83,7 +83,6 @@ export const TercerInicio = () => {
                 transition: "background-color 1s ease",
             }}
         >
-            {/* FLECHA IZQUIERDA */}
             <button
                 type="button"
                 className="prueba-flecha prueba-flecha-izquierda"
@@ -93,7 +92,6 @@ export const TercerInicio = () => {
                 ‹
             </button>
 
-            {/* VENTANA DEL CARRUSEL */}
             <div className="prueba-ventana">
                 <div
                     className="prueba-track"
@@ -106,7 +104,6 @@ export const TercerInicio = () => {
                             className="prueba-slide"
                             key={index}
                         >
-                            {/* IMAGEN */}
                             <div className="imagen-contenido">
                                 <img
                                     src={slide.imagen}
@@ -114,7 +111,6 @@ export const TercerInicio = () => {
                                 />
                             </div>
 
-                            {/* CONTENIDO */}
                             <div
                                 className="prueba-contenido"
                                 style={
@@ -132,7 +128,6 @@ export const TercerInicio = () => {
                                     {slide.texto}
                                 </p>
 
-                                {/* LISTA PROPIA DE CADA SLIDE */}
                                 {slide.lista && (
                                     <ul>
                                         {slide.lista.map((item, i) => (
@@ -149,7 +144,6 @@ export const TercerInicio = () => {
                 </div>
             </div>
 
-            {/* FLECHA DERECHA */}
             <button
                 type="button"
                 className="prueba-flecha prueba-flecha-derecha"

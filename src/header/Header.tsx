@@ -1,17 +1,23 @@
 import "./Header.css";
 import logo from "../assets/logo.png";
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
+    const [menuAbierto, setMenuAbierto] = useState(false);
 
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+        setMenuAbierto(false);
     };
 
+    const cerrarMenu = () => {
+        setMenuAbierto(false);
+    };
 
     return (
         <section id="header">
@@ -24,8 +30,19 @@ export const Header = () => {
                 <img src={logo} alt="" />
             </Link>
 
+            <button
+                type="button"
+                className={`menu-toggle${menuAbierto ? " abierto" : ""}`}
+                onClick={() => setMenuAbierto((abierto) => !abierto)}
+                aria-label={menuAbierto ? "Cerrar menú" : "Abrir menú"}
+                aria-expanded={menuAbierto}
+            >
+                <span />
+                <span />
+                <span />
+            </button>
 
-            <ul>
+            <ul className={menuAbierto ? "abierto" : ""}>
 
                 <li>
                     <Link
@@ -40,7 +57,7 @@ export const Header = () => {
                 <li>
                     <Link
                         to="/especialidades"
-                        onClick={scrollToTop}
+                        onClick={cerrarMenu}
                     >
                         Especialidades
                     </Link>
@@ -50,7 +67,7 @@ export const Header = () => {
                 <li>
                     <Link
                         to="/contacto"
-                        onClick={scrollToTop}
+                        onClick={cerrarMenu}
                         className="contacto-button"
                     >
                         Contacto

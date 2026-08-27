@@ -60,7 +60,7 @@
     color: var(--color-titulo, #BA1397);
     font-family: "Archivo Narrow", sans-serif;
     text-align: left;
-    font-size: 60px;
+    font-size: clamp(26px, 16.4px + 3.01vw, 60px);
 }
 
 
@@ -69,7 +69,7 @@
 .prueba-contenido p {
     color: var(--color-texto, #ED40C4);
     font-family: "Archivo", sans-serif;
-    font-size: 30px;
+    font-size: clamp(16px, 12px + 1.24vw, 30px);
     text-align: left;
     font-weight: 500;
     padding: 15px 0px 15px 0px;
@@ -91,7 +91,7 @@
     align-items: center;
     color: var(--color-texto, #ED40C4);
     font-family: "DM Sans", sans-serif;
-    font-size: 20px;
+    font-size: clamp(14px, 12.3px + 0.53vw, 20px);
     font-weight: 300;
     padding: 5px;
     transition: transform 0.8s ease, color 0.3s ease;
@@ -115,8 +115,9 @@
 }
 
 .imagen-contenido img {
-    width: 650px;
-    height: 450px;
+    width: clamp(280px, 45vw, 650px);
+    height: auto;
+    aspect-ratio: 650 / 450;
     border-radius: 20px;
 }
 
@@ -134,7 +135,7 @@
     border: none;
     background: transparent;
     color: #888;
-    font-size: 55px;
+    font-size: clamp(32px, 25.5px + 2.03vw, 55px);
     font-weight: 300;
     line-height: 1;
     cursor: pointer;
@@ -191,17 +192,7 @@
         text-align: left;
     }
     #jornada .prueba-contenido h2 {
-        font-size: 36px;
         text-align: left;
-    }
-    .prueba-contenido p {
-        font-size: 20px;
-    }
-    .prueba-contenido ul li {
-        font-size: 17px;
-    }
-    .prueba-flecha {
-        font-size: 40px;
     }
     .prueba-flecha-izquierda {
         left: 2%;
@@ -240,17 +231,9 @@
         text-align: left;
     }
     #jornada .prueba-contenido h2 {
-        font-size: 26px;
         text-align: left;
     }
-    .prueba-contenido p {
-        font-size: 16px;
-    }
-    .prueba-contenido ul li {
-        font-size: 14px;
-    }
     .prueba-flecha {
-        font-size: 32px;
         padding: 6px;
     }
     .prueba-flecha-izquierda {

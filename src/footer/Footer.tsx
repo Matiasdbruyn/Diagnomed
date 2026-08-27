@@ -29,7 +29,6 @@ export const Footer = () => {
                     <img src={logoBlanco} alt="Diagnomed" />
                 </Link>
 
-                {/* TODO: reemplazar por el link real de WhatsApp o turnos online si suman uno */}
                 <a className="footer-cta" href="mailto:turnos.diagno@gmail.com">
                     <span className="footer-cta-icon"><IconMail /></span>
                     Escribinos por email

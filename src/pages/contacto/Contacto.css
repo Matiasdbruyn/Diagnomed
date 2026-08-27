@@ -253,11 +253,13 @@
 .contacto-faq-respuesta {
     font-family: "DM Sans", sans-serif;
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.5;
     color: #555;
     margin: 0 0 24px;
     padding: 0 4px;
     max-width: 700px;
+    text-align: left;
+    white-space: pre-line;
 }
 
 @media (max-width: 720px) {

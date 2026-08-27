@@ -2,7 +2,6 @@ import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import "./Contacto.css";
 
-// Mismas especialidades que se muestran en /especialidades
 const ESPECIALIDADES = [
     "Otorrinolaringología",
     "Clínica Médica",
@@ -37,7 +36,7 @@ const FAQS: Faq[] = [
     {
         pregunta: "¿Tengo que ir en ayunas para una ecografía?",
         respuesta:
-            "Algunos estudios requieren preparación previa (como ayuno u otras indicaciones) y otros no. Te lo confirmamos al momento de sacar el turno, según el tipo de ecografía que te corresponda.",
+            "Algunos estudios requieren preparación previa (como ayuno u otras indicaciones) y otros no. \n Te lo confirmamos al momento de sacar el turno, según el tipo de ecografía que te corresponda.",
     },
     {
         pregunta: "¿Cómo saco un turno?",
@@ -56,9 +55,6 @@ const FAQS: Faq[] = [
     },
 ];
 
-// TODO: confirmar que este es el número de WhatsApp correcto en formato internacional
-// (54 9 11 4914-9441, siguiendo el formato que pide wa.me para números argentinos).
-// Probarlo apenas se suba a producción.
 const WHATSAPP_NUMERO = "5491149149441";
 
 type FormState = {
@@ -115,7 +111,7 @@ export const Contacto = () => {
         <>
             <section className="contacto-hero">
                 <h1>Contactanos</h1>
-                <p>¿Tenés una consulta o querés más información? Escribinos y te respondemos a la brevedad.</p>
+                <p>¿Tenés una consulta o querés más información? <br /> Escribinos y te respondemos a la brevedad.</p>
             </section>
 
             <section className="contacto-formulario">
@@ -203,11 +199,11 @@ export const Contacto = () => {
                         novedades de Diagnomed.
                     </p>
 
-                    {/* TODO: reemplazar "#" por el link real del canal de difusión cuando lo pasen */}
                     <a
-                        href="#"
+                        href="https://wa.me/5491149149441"
                         className="contacto-comunidad-boton"
-                        onClick={(e) => e.preventDefault()}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Unirme al canal de WhatsApp
                     </a>

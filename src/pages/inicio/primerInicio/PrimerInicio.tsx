@@ -42,25 +42,12 @@ export const PrimerInicio = () => {
 
                 <div className="carrusel-track">
 
-                    {/* Imagen 1 */}
                     <img src={entrada} alt="" />
-
-                    {/* Imagen 2 */}
                     <img src={esquina} alt="" />
-
-                    {/* Imagen 3 */}
                     <img src={ioma} alt="" />
-
-                    {/* Imagen 4 */}
                     <img src={cartel} alt="" />
-
-                    {/* Imagen 5 */}
                     <img src={escalera} alt="" />
-
-                    {/* Imagen 6 */}
                     <img src={adentro} alt="" />
-
-                    {/* COPIA DE LA PRIMERA */}
                     <img src={entrada} alt="" />
 
                 </div>
