@@ -42,6 +42,20 @@ import iconoMamo from "../../assets/icons/mamografia.png"
 import iconoPunciones from "../../assets/icons/punciones.png"
 
 
+type ObraSocial = {
+    nombre: string;
+    detalle?: string;
+};
+
+const OBRAS_SOCIALES: ObraSocial[] = [
+    { nombre: "IOMA", detalle: "100% de cobertura" },
+    { nombre: "OSPIT" },
+    { nombre: "PROSAL" },
+    { nombre: "PAMI", detalle: "solo para ecografías y radiografías" },
+    { nombre: "Prepagas", detalle: "solo para estudios de imágenes (OSDE, Swiss Medical y Sancor)" },
+    { nombre: "Pacientes particulares" },
+];
+
 type Categoria = "especialidad" | "estudio"
 
 type Tarjeta = {
@@ -304,6 +318,21 @@ export const Especialidades = () => {
                         </article>
                     ))}
                 </div>
+            </section>
+
+            <section className="obras-sociales">
+                <h1>Obras sociales</h1>
+                <p className="obras-sociales-intro">
+                    Ante la duda, escribinos por WhatsApp y te confirmamos tu cobertura.
+                </p>
+                <ul className="obras-sociales-lista">
+                    {OBRAS_SOCIALES.map((obra) => (
+                        <li key={obra.nombre}>
+                            <span className="obras-sociales-nombre">{obra.nombre}</span>
+                            {obra.detalle && <span className="obras-sociales-detalle"> — {obra.detalle}</span>}
+                        </li>
+                    ))}
+                </ul>
             </section>
 
             {abierta && (

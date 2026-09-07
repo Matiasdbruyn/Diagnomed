@@ -12,7 +12,7 @@ export const PrimerInicio = () => {
 
             <div className="div1">
                 <h1>Cuidamos tu salud de manera integral</h1>
-                <p>Somos un <span>centro médico de Ramos Mejía </span><br />
+                <p>Somos un <span>centro médico en Ramos Mejía </span><br />
                     donde vas a encontrar todas las especialidades <br />
                     y estudios que necesitás.
                 </p>

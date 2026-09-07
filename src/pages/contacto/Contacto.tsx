@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import "./Contacto.css";
+import fotoComunidad from "../../assets/contactoComunidad.jpg";
 
 const ESPECIALIDADES = [
     "Otorrinolaringología",
@@ -26,7 +27,7 @@ const FAQS: Faq[] = [
     {
         pregunta: "¿Qué obras sociales aceptan?",
         respuesta:
-            "Trabajamos con IOMA (cobertura 100% en estudios seleccionados), OSPIT, PROSAL y PAMI (para estudios seleccionados). También aceptamos prepagas para estudios de imágenes y atendemos a pacientes particulares. Ante la duda, escribinos por WhatsApp y te confirmamos tu cobertura.",
+            "Trabajamos con IOMA (100% de cobertura), OSPIT, PROSAL y PAMI (solo para ecografías y radiografías). También aceptamos prepagas para estudios de imágenes (OSDE, Swiss Medical y Sancor) y atendemos a pacientes particulares. Ante la duda, escribinos por WhatsApp y te confirmamos tu cobertura.",
     },
     {
         pregunta: "¿Necesito orden médica para sacar un turno?",
@@ -59,14 +60,14 @@ const WHATSAPP_NUMERO = "5491149149441";
 
 type FormState = {
     nombre: string;
-    telefono: string;
+    dni: string;
     especialidad: string;
     consulta: string;
 };
 
 const FORM_INICIAL: FormState = {
     nombre: "",
-    telefono: "",
+    dni: "",
     especialidad: "",
     consulta: "",
 };
@@ -88,7 +89,7 @@ export const Contacto = () => {
         const lineas = [
             "Hola, quiero hacer una consulta desde la web de Diagnomed.",
             `Nombre: ${form.nombre}`,
-            `Teléfono: ${form.telefono}`,
+            `DNI: ${form.dni}`,
         ];
 
         if (form.especialidad) {
@@ -129,12 +130,13 @@ export const Contacto = () => {
                     </div>
 
                     <div className="contacto-campo">
-                        <label htmlFor="telefono">Teléfono / WhatsApp</label>
+                        <label htmlFor="dni">DNI</label>
                         <input
-                            id="telefono"
-                            name="telefono"
-                            type="tel"
-                            value={form.telefono}
+                            id="dni"
+                            name="dni"
+                            type="text"
+                            inputMode="numeric"
+                            value={form.dni}
                             onChange={handleChange}
                             required
                         />
@@ -192,7 +194,10 @@ export const Contacto = () => {
             </section>
 
             <section className="contacto-comunidad">
-                <div className="contacto-comunidad-card">
+                <div
+                    className="contacto-comunidad-card"
+                    style={{ backgroundImage: `url(${fotoComunidad})` }}
+                >
                     <h2>Enterate antes que nadie</h2>
                     <p>
                         Sumate a nuestro canal de WhatsApp y enterate primero de jornadas, turnos disponibles y

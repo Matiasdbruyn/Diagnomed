@@ -110,6 +110,64 @@
     border-color: rgba(46, 87, 158, 0.35);
 }
 
+.obras-sociales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 6% 100px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.obras-sociales h1 {
+    font-family: "Archivo", sans-serif;
+    font-size: 45px;
+    padding-bottom: 16px;
+}
+
+.obras-sociales-intro {
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    color: #555;
+    max-width: 620px;
+    margin: 0 0 32px;
+    line-height: 1.5;
+}
+
+.obras-sociales-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 640px;
+    list-style: none;
+    text-align: left;
+}
+
+.obras-sociales-lista li {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ececec;
+}
+
+.obras-sociales-lista li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.obras-sociales-nombre {
+    font-family: "Archivo", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #008E80;
+}
+
+.obras-sociales-detalle {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
 .informacion-overlay {
     position: fixed;
     inset: 0;
@@ -267,6 +325,21 @@
     }
     .informacion-grid {
         grid-template-columns: 1fr;
+    }
+    .obras-sociales {
+        padding: 10px 20px 60px;
+    }
+    .obras-sociales h1 {
+        font-size: 32px;
+    }
+    .obras-sociales-intro {
+        font-size: 15px;
+    }
+    .obras-sociales-nombre {
+        font-size: 16px;
+    }
+    .obras-sociales-detalle {
+        font-size: 14px;
     }
     .informacion-overlay {
         padding: 20px;
