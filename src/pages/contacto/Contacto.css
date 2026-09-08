@@ -276,6 +276,81 @@
     white-space: pre-line;
 }
 
+.contacto-trabajo {
+    padding: 0 6% 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.contacto-trabajo-card {
+    width: 100%;
+    max-width: 1100px;
+    background-color: #008E80;
+    border-radius: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+
+.contacto-trabajo-texto {
+    flex: 1 1 45%;
+    padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.contacto-trabajo-texto h2 {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.contacto-trabajo-texto p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #F6F6F6;
+    margin: 14px 0 0;
+}
+
+.contacto-trabajo-boton {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 26px;
+    font-family: "Archivo", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #008E80;
+    background-color: #ffffff;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 14px 28px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease;
+}
+
+.contacto-trabajo-boton:hover {
+    transform: scale(1.04);
+}
+
+.contacto-trabajo-foto {
+    flex: 1 1 55%;
+    min-height: 340px;
+}
+
+.contacto-trabajo-foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 @media (max-width: 720px) {
     .contacto-hero {
         padding: 70px 6% 40px;
@@ -298,6 +373,19 @@
     .contacto-faq h2 {
         font-size: 28px;
     }
+    .contacto-trabajo-card {
+        flex-direction: column-reverse;
+        border-radius: 32px;
+    }
+    .contacto-trabajo-texto {
+        padding: 32px 28px;
+    }
+    .contacto-trabajo-texto h2 {
+        font-size: 26px;
+    }
+    .contacto-trabajo-foto {
+        min-height: 220px;
+    }
 }
 
 @media (min-width: 431px) and (max-width: 800px) {
@@ -313,6 +401,15 @@
     }
     .contacto-comunidad-card {
         padding: 44px 32px;
+    }
+    .contacto-trabajo-texto {
+        padding: 44px 36px;
+    }
+    .contacto-trabajo-texto h2 {
+        font-size: 30px;
+    }
+    .contacto-trabajo-foto {
+        min-height: 260px;
     }
 }
 
@@ -348,5 +445,23 @@
     }
     .contacto-faq-pregunta span:first-child {
         font-size: 15px;
+    }
+    .contacto-trabajo-card {
+        flex-direction: column-reverse;
+        border-radius: 26px;
+    }
+    .contacto-trabajo-texto {
+        padding: 28px 22px;
+    }
+    .contacto-trabajo-texto h2 {
+        font-size: 22px;
+    }
+    .contacto-trabajo-foto {
+        min-height: 180px;
+    }
+    .contacto-trabajo-boton {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
     }
 }

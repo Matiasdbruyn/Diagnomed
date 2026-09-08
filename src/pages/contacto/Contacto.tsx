@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import "./Contacto.css";
 import fotoComunidad from "../../assets/contactoComunidad.jpg";
+import fotoTrabajaConNosotros from "../../assets/contactoTrabajaConNosotros.jpg";
 
 const ESPECIALIDADES = [
     "Otorrinolaringología",
@@ -243,6 +244,30 @@ export const Contacto = () => {
                             </div>
                         );
                     })}
+                </div>
+            </section>
+
+            <section className="contacto-trabajo">
+                <div className="contacto-trabajo-card">
+                    <div className="contacto-trabajo-texto">
+                        <h2>¿Querés trabajar con nosotros?</h2>
+                        <p>
+                            Buscamos profesionales de la salud que quieran sumarse a un equipo cercano y en
+                            constante crecimiento.
+                        </p>
+                        <p>
+                            <strong>Si te interesa formar parte de Diagnomed, escribinos.</strong>
+                        </p>
+                        <a
+                            className="contacto-trabajo-boton"
+                            href="mailto:diagnomed2023@gmail.com"
+                        >
+                            Dejanos tu CV en diagnomed2023@gmail.com
+                        </a>
+                    </div>
+                    <div className="contacto-trabajo-foto">
+                        <img src={fotoTrabajaConNosotros} alt="" />
+                    </div>
                 </div>
             </section>
         </>

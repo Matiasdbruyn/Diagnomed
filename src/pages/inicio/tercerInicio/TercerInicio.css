@@ -118,6 +118,8 @@
     width: clamp(280px, 45vw, 650px);
     height: auto;
     aspect-ratio: 650 / 450;
+    object-fit: cover;
+    object-position: center;
     border-radius: 20px;
 }
 

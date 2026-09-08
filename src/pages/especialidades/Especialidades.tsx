@@ -13,19 +13,21 @@ import fotoReumatologia from "../../assets/reumatologia.jpg"
 import fotoFlebologia from "../../assets/flebología.jpg"
 import fotoOtorrinolaringologia from "../../assets/otorrinolaringologia.jpg"
 import fotoNutricion from "../../assets/clinicaMedica3.jpg"
-import fotoEstudio from "../../assets/clinicaMedica2.jpg"
 import fotoCardiologiaInfantil from "../../assets/cardiologiaInfantil.jpg"
 import fotoDopplerCuello from "../../assets/dopplerCuello.jpg"
 import fotoDopplerPeriferico from "../../assets/dopplerPeriferico.jpg"
 import fotoEcografias from "../../assets/ecografias.jpg"
 import fotoHolter from "../../assets/holter.jpg"
 import fotoPresurometria from "../../assets/presurometria.jpg"
+import fotoMamo from "../../assets/mamografia.jpg"
+import fotoPunciones from "../../assets/punciones.jpg"
 
 import iconoOtorrinolaringologia from "../../assets/icons/otorrinolaringologia.png"
 import iconoClinicaMedica from "../../assets/icons/clinicaMedica.png"
 import iconoTraumatologia from "../../assets/icons/traumatologia.png"
 import iconoGinecologia from "../../assets/icons/ginecologia.png"
 import iconoCardiologia from "../../assets/icons/cardiologia.png"
+import iconoCardiologiaInfantil from "../../assets/icons/cardiologiaInfantil.png"
 import iconoNutricion from "../../assets/icons/nutricion.png"
 import iconoPediatria from "../../assets/icons/pediatria.png"
 import iconoReumatologia from "../../assets/icons/reumatologia.png"
@@ -121,7 +123,7 @@ const tarjetas: Tarjeta[] = [
         descripcion:
             "Cuida el corazón de los más chicos, desde el control preventivo hasta el seguimiento de soplos o antecedentes familiares adaptados a cada edad.",
         imagen: fotoCardiologiaInfantil,
-        icono: iconoCardiologia,
+        icono: iconoCardiologiaInfantil,
     },
     {
         id: 7,
@@ -247,7 +249,7 @@ const tarjetas: Tarjeta[] = [
         titulo: "Punciones",
         descripcion:
             "Es un estudio de mayor complejidad que requiere una orden médica específica. Antes de darte el turno revisamos la indicación para asegurarnos de que esté todo correcto.",
-        imagen: fotoEstudio,
+        imagen: fotoPunciones,
         icono: iconoPunciones,
     },
     {
@@ -256,7 +258,7 @@ const tarjetas: Tarjeta[] = [
         titulo: "Mamografías",
         descripcion:
             "Detecta cambios en la mama mucho antes de que puedan sentirse al tacto. Dura pocos minutos y, si bien puede resultar incómodo, la molestia es breve y el estudio es clave para cuidarte a tiempo.",
-        imagen: fotoEstudio,
+        imagen: fotoMamo,
         icono: iconoMamo,
     },
 ];

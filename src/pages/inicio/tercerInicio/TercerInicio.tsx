@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./TercerInicio.css";
-import gineco2 from "../../../assets/gineco2.jpg";
+import gineco2 from "../../../assets/gineco2.jpeg";
 import clinicaMedica3 from "../../../assets/clinicaMedica3.jpg";
 
 const slides = [
