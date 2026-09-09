@@ -204,8 +204,12 @@
         grid-row: 3;
         grid-template-columns: 1fr;
     }
+    .div1 p br {
+        display: none;
+    }
     .div2 .reserva {
         padding: 24px 0;
+        gap: 20px;
     }
     .div2 .reserva h1 {
         padding-left: 24px;
@@ -239,8 +243,12 @@
         grid-row: 3;
         grid-template-columns: 1fr;
     }
+    .div1 p br {
+        display: none;
+    }
     .div2 .reserva {
         padding: 20px 0;
+        gap: 16px;
     }
     .div2 .reserva h1 {
         padding-left: 20px;
