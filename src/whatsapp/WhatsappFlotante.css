@@ -1,0 +1,40 @@
+.whatsapp-flotante {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 500;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-flotante svg {
+    width: 32px;
+    height: 32px;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+    .whatsapp-flotante {
+        right: 16px;
+        bottom: 16px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .whatsapp-flotante svg {
+        width: 28px;
+        height: 28px;
+    }
+}

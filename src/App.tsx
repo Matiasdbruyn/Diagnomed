@@ -6,6 +6,7 @@ import { Index } from "./pages/inicio/Index";
 import { ScrollToTop } from './ScrollToTop';
 import { Especialidades } from './pages/especialidades/Especialidades'
 import { Contacto } from './pages/contacto/Contacto'
+import { WhatsappFlotante } from './whatsapp/WhatsappFlotante'
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
       <Footer />
+      <WhatsappFlotante />
     </BrowserRouter>
   )
 }
