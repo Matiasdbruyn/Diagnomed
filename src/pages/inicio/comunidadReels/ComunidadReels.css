@@ -1,0 +1,128 @@
+.reels {
+    --reel-w: clamp(140px, 16vw, 220px);
+    --reel-gap: clamp(14px, 2.5vw, 28px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 90px 6% 100px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.reels-label {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #008E80;
+    margin: 0 0 16px;
+}
+
+.reels-titulo {
+    font-family: "Archivo", sans-serif;
+    font-size: clamp(28px, 3.2vw, 46px);
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+    max-width: 700px;
+}
+
+.reels-subtitulo {
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    color: #666;
+    margin: 16px 0 50px;
+}
+
+.reels-carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1300px;
+    gap: 12px;
+}
+
+.reels-pista-contenedor {
+    flex: 1 1 auto;
+    width: 100%;
+    height: calc(var(--reel-w) * 16 / 9);
+    overflow: hidden;
+    position: relative;
+}
+
+.reels-tarjeta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--reel-w);
+    aspect-ratio: 9 / 16;
+    border-radius: 18px;
+    overflow: hidden;
+    display: block;
+    transition: transform 0.45s ease, opacity 0.45s ease;
+    cursor: pointer;
+}
+
+.reels-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.reels-flecha {
+    flex-shrink: 0;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #888;
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.reels-flecha:hover:not(:disabled) {
+    color: #1A1A1A;
+}
+
+.reels-flecha:disabled {
+    color: #dcdcdc;
+    cursor: default;
+}
+
+.reels-boton {
+    display: inline-block;
+    margin-top: 50px;
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #008E80;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 16px 40px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.reels-boton:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 24px rgba(0, 142, 128, 0.25);
+}
+
+@media (max-width: 600px) {
+    .reels {
+        padding: 60px 5% 70px;
+    }
+    .reels-subtitulo {
+        margin-bottom: 32px;
+    }
+    .reels-carrusel {
+        gap: 4px;
+    }
+}

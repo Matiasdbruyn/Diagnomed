@@ -95,7 +95,7 @@
 }
 
 .tarjeta--especialidad h3 {
-    color: #008E80;
+    color: #189888;
 }
 
 .tarjeta--especialidad .tarjeta-icono:empty {
@@ -241,7 +241,7 @@
 
 .informacion-modal p {
     font-family: "Archivo", sans-serif;
-    margin: 0 auto;
+    margin: 0 auto 28px;
     max-width: 800px;
     font-size: 19px;
     line-height: 1.5;
@@ -293,6 +293,59 @@
     object-fit: cover;
     object-position: center 60%;
     padding-bottom: 20px;
+}
+
+.informacion-doctores {
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0;
+    text-align: left;
+}
+
+.informacion-doctores li {
+    padding: 14px 0;
+    border-bottom: 1px solid #ececec;
+}
+
+.informacion-doctores li:last-child {
+    border-bottom: none;
+}
+
+.informacion-doctor-fila {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.informacion-doctor-nombre {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #189888;
+}
+
+.informacion-modal--estudio .informacion-doctor-nombre {
+    color: #2E579E;
+}
+
+.informacion-doctor-horario {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+    white-space: pre-line;
+    flex-shrink: 0;
+}
+
+.informacion-modal p.informacion-doctor-estudios {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #888;
+    margin: 8px 0 0;
+    max-width: 55%;
+    text-align: left;
 }
 
 .informacion-cerrar {
@@ -360,6 +413,17 @@
     }
     .informacion-modal p {
         font-size: 16px;
+    }
+    .informacion-doctor-fila {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .informacion-doctor-horario {
+        text-align: left;
+    }
+    .informacion-modal p.informacion-doctor-estudios {
+        max-width: none;
     }
 }
 

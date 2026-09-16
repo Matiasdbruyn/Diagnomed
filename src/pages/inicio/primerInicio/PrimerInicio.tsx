@@ -23,7 +23,7 @@ export const PrimerInicio = () => {
                 <div className="reserva">
                     <h1>Tus chequeos médicos y más</h1>
                     <a
-                        href="https://v2.soloturnos.com/empresa/diagnome"
+                        href="https://v2.soloturnos.com/empresa/diagnomed"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

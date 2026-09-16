@@ -21,6 +21,7 @@ import fotoHolter from "../../assets/holter.jpg"
 import fotoPresurometria from "../../assets/presurometria.jpg"
 import fotoMamo from "../../assets/mamografia.jpg"
 import fotoPunciones from "../../assets/punciones.jpg"
+import fotoDensitometria from "../../assets/densitometria.jpg"
 
 import iconoOtorrinolaringologia from "../../assets/icons/otorrinolaringologia.png"
 import iconoClinicaMedica from "../../assets/icons/clinicaMedica.png"
@@ -42,31 +43,41 @@ import iconoDoppler from "../../assets/icons/doppler.png"
 import iconoRadio from "../../assets/icons/radiografia.png"
 import iconoMamo from "../../assets/icons/mamografia.png"
 import iconoPunciones from "../../assets/icons/punciones.png"
+import iconoDensitometria from "../../assets/icons/densitometria.png"
 
 
 type ObraSocial = {
     nombre: string;
+    completo?: string;
     detalle?: string;
 };
 
 const OBRAS_SOCIALES: ObraSocial[] = [
     { nombre: "IOMA", detalle: "100% de cobertura" },
-    { nombre: "OSPIT" },
+    { nombre: "OSPIT", completo: "Obra Social del Personal de la Industria Textil" },
     { nombre: "PROSAL" },
     { nombre: "PAMI", detalle: "solo para ecografías y radiografías" },
-    { nombre: "Prepagas", detalle: "solo para estudios de imágenes (OSDE, Swiss Medical y Sancor)" },
-    { nombre: "Pacientes particulares" },
+    { nombre: "OSPTV", completo: "Obra Social del Personal de Televisión" },
+    { nombre: "Atención de manera particular" },
 ];
 
 type Categoria = "especialidad" | "estudio"
+
+type Doctor = {
+    nombre: string;
+    horario: string;
+    estudios?: string;
+};
 
 type Tarjeta = {
     id: number;
     categoria: Categoria;
     titulo: string;
-    descripcion: string;
+    descripcion?: string;
     imagen: string;
     icono?: string;
+    colorTitulo?: string;
+    doctores?: Doctor[];
 };
 
 const tarjetas: Tarjeta[] = [
@@ -78,6 +89,9 @@ const tarjetas: Tarjeta[] = [
             "Atiende oídos, nariz y garganta. Desde dolores de garganta que se repiten hasta problemas de audición o sinusitis.",
         imagen: fotoOtorrinolaringologia,
         icono: iconoOtorrinolaringologia,
+        doctores: [
+            { nombre: "Camilo Andrés Silva Ospina", horario: "Martes de 12:00 a 15:00" },
+        ],
     },
     {
         id: 2,
@@ -87,6 +101,11 @@ const tarjetas: Tarjeta[] = [
             "Atiende problemas generales, controles y chequeos. \n Si no sabés a qué especialista ir, empezá por acá.",
         imagen: fotoClinicaMedica,
         icono: iconoClinicaMedica,
+        doctores: [
+            { nombre: "Gabriel Osvaldo Orlandi", horario: "Jueves de 15:30 a 17:00" },
+            { nombre: "Marilina Cabrera", horario: "Jueves de 09:00 a 13:00" },
+            { nombre: "Luciana María Linale", horario: "Viernes de 14:00 a 16:00" },
+        ],
     },
     {
         id: 3,
@@ -96,6 +115,10 @@ const tarjetas: Tarjeta[] = [
             "Consultá al traumatólogo si tenés dolor persistente, una lesión o molestias al moverse en tus huesos, músculos o articulaciones.",
         imagen: fotoTraumatologia,
         icono: iconoTraumatologia,
+        doctores: [
+            { nombre: "Jessica Martínez Leiva", horario: "Lunes de 15:00 a 17:00" },
+            { nombre: "Abel Omar Choque López", horario: "Jueves de 15:30 a 17:30 y Viernes de 09:00 a 12:00" },
+        ],
     },
     {
         id: 4,
@@ -105,6 +128,11 @@ const tarjetas: Tarjeta[] = [
             "Acompaña la salud de la mujer en todas las etapas (controles anuales, PAP, anticoncepción y consultas específicas).",
         imagen: fotoGinecologia,
         icono: iconoGinecologia,
+        colorTitulo: "#F042C6",
+        doctores: [
+            { nombre: "María José Valls Fuentes", horario: "Martes de 12:00 a 15:00 y Miércoles de 12:00 a 16:00" },
+            { nombre: "Laura Angélica Giordano", horario: "Viernes de 14:30 a 16:00" },
+        ],
     },
     {
         id: 5,
@@ -114,6 +142,12 @@ const tarjetas: Tarjeta[] = [
             "Cuida tu corazón con estudios como electrocardiograma, ecocardiograma y Doppler cardíaco. Clave para prevenir y controlar la presión.",
         imagen: fotoCardiologia,
         icono: iconoCardiologia,
+        colorTitulo: "#DE3042",
+        doctores: [
+            { nombre: "Adrián Antonio Tarditti", horario: "Jueves de 16:00 a 17:40" },
+            { nombre: "Mario Cameselle", horario: "Miércoles de 13:00 a 17:30" },
+            { nombre: "Graciela Gomez", horario: "Miércoles de 09:00 a 12:00 (por orden de llegada)" },
+        ],
 
     },
     {
@@ -124,6 +158,10 @@ const tarjetas: Tarjeta[] = [
             "Cuida el corazón de los más chicos, desde el control preventivo hasta el seguimiento de soplos o antecedentes familiares adaptados a cada edad.",
         imagen: fotoCardiologiaInfantil,
         icono: iconoCardiologiaInfantil,
+        colorTitulo: "#30A2DE",
+        doctores: [
+            { nombre: "Omar Aguilar", horario: "Viernes, ingreso de 13:00 a 14:00 (atención de 14:00 a 15:00, por orden de llegada)" },
+        ],
     },
     {
         id: 7,
@@ -133,6 +171,9 @@ const tarjetas: Tarjeta[] = [
             "Te acompaña a mejorar tu alimentación con un plan pensado para tu cuerpo, tu rutina y tus objetivos de salud.",
         imagen: fotoNutricion,
         icono: iconoNutricion,
+        doctores: [
+            { nombre: "Santiago Suárez", horario: "Miércoles de 12:00 a 16:00" },
+        ],
     },
     {
         id: 8,
@@ -142,6 +183,10 @@ const tarjetas: Tarjeta[] = [
             "Acompaña el crecimiento de los chicos con controles, vacunación y atención de todas las consultas de la infancia.",
         imagen: fotoPediatria,
         icono: iconoPediatria,
+        colorTitulo: "#36D2E4",
+        doctores: [
+            { nombre: "Paula Agustina Castro", horario: "Lunes de 15:00 a 17:30" },
+        ],
     },
     {
         id: 9,
@@ -151,6 +196,9 @@ const tarjetas: Tarjeta[] = [
             "Trata dolores articulares, musculares y enfermedades como la artritis. \n Consultá si el dolor se repite o te limita en el día a día.",
         imagen: fotoReumatologia,
         icono: iconoReumatologia,
+        doctores: [
+            { nombre: "Gabriela Calderón Mostajo", horario: "Lunes de 14:30 a 17:30" },
+        ],
     },
     {
         id: 10,
@@ -160,6 +208,9 @@ const tarjetas: Tarjeta[] = [
             "Se ocupa de la salud de tus venas: várices, piernas cansadas, hinchazón y problemas de circulación.",
         imagen: fotoFlebologia,
         icono: iconoFlebologia,
+        doctores: [
+            { nombre: "María Laura Campanelli", horario: "Consultanos el horario por WhatsApp" },
+        ],
     },
     {
         id: 11,
@@ -169,6 +220,9 @@ const tarjetas: Tarjeta[] = [
             "Cuida el funcionamiento de tus riñones. Fundamental si tenés presión alta, diabetes o antecedentes familiares.",
         imagen: fotoNefrologia,
         icono: iconoNefrologia,
+        doctores: [
+            { nombre: "Paola Karina Pirruccio", horario: "Jueves de 11:00 a 15:00" },
+        ],
     },
     {
         id: 12,
@@ -178,16 +232,62 @@ const tarjetas: Tarjeta[] = [
             "Te ayuda a recuperar el movimiento después de una lesión, cirugía o dolor crónico. \n La atención se coordina por lista de espera para asegurar continuidad en el tratamiento.",
         imagen: fotoKinesiologia,
         icono: iconoKine,
+        doctores: [
+            { nombre: "Garavaglia Selene Zoe", horario: "Martes y jueves de 09:20 a 15:40, y lunes, miércoles y viernes de 09:00 a 13:30" },
+        ],
     },
 
     {
         id: 13,
         categoria: "estudio",
-        titulo: "Ecografías",
+        titulo: "Ecografías (Lunes a Miércoles)",
         descripcion:
             "Estudio que usa ondas de sonido para ver por dentro, sin radiación y sin dolor. \n Se aplica a abdomen, riñones, tiroides, mamas y más zonas.",
         imagen: fotoEcografias,
         icono: iconoEcografias,
+        doctores: [
+            {
+                nombre: "Mariela Monzón",
+                horario: "En pacientes a partir de 13 años \n Lunes: 09:00 a 16:00",
+                estudios: "Ecografía abdominal - Ecografía renal - Ecografía vesical/prostática - Ecografía transvaginal - Ecografía ginecológica - Ecografía mamaria - Ecografía de tiroides",
+            },
+            {
+                nombre: "Javier Ignacio Devani",
+                horario: "En pacientes adultos y pediátricos \n Martes: 11:30 a 14:30 y Miércoles: 14:30 a 16:10",
+                estudios: "Ecografía abdominal - Ecografía renal - Ecografía vesical/prostática - Ecografía transvaginal - Ecografía ginecológica - Ecografía mamaria - Ecografía de partes blandas - Ecografía de tiroides - Ecografía testicular - Ecografía obstétrica - Scan Fetal",
+            },
+            {
+                nombre: "Federico Davila",
+                horario: "En pacientes adultos y pediátricos \n Miércoles: 09:00 a 13:00",
+                estudios: "Ecografía abdominal - Ecografía renal - Ecografía vesical/prostática - Ecografía transvaginal - Ecografía ginecológica - Ecografía mamaria - Ecografía de partes blandas - Ecografía de tiroides - Ecografía testicular - Ecografía obstétrica - Ecografía de cadera en bebés (3 meses de vida)",
+            },
+        ],
+    },
+    {
+        id: 22,
+        categoria: "estudio",
+        titulo: "Ecografías (Jueves a Sábados)",
+        descripcion:
+            "Estudio que usa ondas de sonido para ver por dentro, sin radiación y sin dolor. \n Se aplica a abdomen, riñones, tiroides, mamas y más zonas.",
+        imagen: fotoEcografias,
+        icono: iconoEcografias,
+        doctores: [
+            {
+                nombre: "Carolina Salazar Villanueva",
+                horario: "En pacientes adultos y pediátricos \n Jueves: 09:00 a 11:00",
+                estudios: "Ecografía abdominal - Ecografía renal - Ecografía vesical/prostática - Ecografía transvaginal - Ecografía ginecológica - Ecografía mamaria - Ecografía de tiroides - Ecografía obstétrica del primer trimestre - Ecografía de cadera en bebés (3 meses de vida)",
+            },
+            {
+                nombre: "Marlen Yaniza Herrera Solís",
+                horario: "En pacientes a partir de 12 años \n Jueves: 13:00 a 16:30",
+                estudios: "Ecografía abdominal - Ecografía renal - Ecografía vesical/prostática - Ecografía transvaginal - Ecografía ginecológica - Ecografía mamaria - Ecografía de pared abdominal - Ecografía de tiroides - Ecografía pleural",
+            },
+            {
+                nombre: "Geovana Flores Ramos",
+                horario: "En pacientes adultos y pediátricos \n Viernes: 09:00 a 12:00",
+                estudios: "Ecografía abdominal - Ecografía renal - Ecografía vesical/prostática - Ecografía transvaginal - Ecografía ginecológica - Ecografía mamaria - Ecografía de partes blandas (no se realizan estudios de muñeca ni dedos) - Ecografía de tiroides - Ecografía testicular - Ecografía obstétrica del primer trimestre",
+            },
+        ],
     },
     {
         id: 14,
@@ -215,6 +315,9 @@ const tarjetas: Tarjeta[] = [
             "Una imagen rápida de huesos y órganos internos. Es clave para diagnosticar fracturas, dolores o problemas respiratorios.",
         imagen: fotoRadiologia,
         icono: iconoRadio,
+        doctores: [
+            { nombre: "Karina Paola Solis", horario: "Lunes a viernes de 09:00 a 14:30" },
+        ],
     },
     {
         id: 17,
@@ -224,6 +327,10 @@ const tarjetas: Tarjeta[] = [
             "Ecografía del corazón que permite ver cómo late, cómo bombea y el estado de sus válvulas.",
         imagen: fotoCardiologia,
         icono: iconoEcocardiograma,
+        doctores: [
+            { nombre: "Marta Susana Aloy", horario: "Martes de 14:30 a 17:30" },
+            { nombre: "Mario Cameselle", horario: "Viernes de 14:00 a 17:30" },
+        ],
     },
     {
         id: 18,
@@ -233,6 +340,9 @@ const tarjetas: Tarjeta[] = [
             "Evalúa cómo circula la sangre por las venas y arterias de brazos y piernas.",
         imagen: fotoDopplerPeriferico,
         icono: iconoDoppler,
+        doctores: [
+            { nombre: "Gustavo Depaoli", horario: "Martes de 09:00 a 11:00" },
+        ],
     },
     {
         id: 19,
@@ -242,15 +352,21 @@ const tarjetas: Tarjeta[] = [
             "Estudia las arterias que llevan sangre al cerebro para detectar obstrucciones a tiempo.",
         imagen: fotoDopplerCuello,
         icono: iconoDoppler,
+        doctores: [
+            { nombre: "Gustavo Depaoli", horario: "Martes de 09:00 a 11:00" },
+        ],
     },
     {
         id: 20,
         categoria: "estudio",
-        titulo: "Punciones",
+        titulo: "Punciones de tiroides",
         descripcion:
             "Es un estudio de mayor complejidad que requiere una orden médica específica. Antes de darte el turno revisamos la indicación para asegurarnos de que esté todo correcto.",
         imagen: fotoPunciones,
         icono: iconoPunciones,
+        doctores: [
+            { nombre: "Acquafresca", horario: "Lunes de 09:00 a 12:00" },
+        ],
     },
     {
         id: 21,
@@ -260,6 +376,19 @@ const tarjetas: Tarjeta[] = [
             "Detecta cambios en la mama mucho antes de que puedan sentirse al tacto. Dura pocos minutos y, si bien puede resultar incómodo, la molestia es breve y el estudio es clave para cuidarte a tiempo.",
         imagen: fotoMamo,
         icono: iconoMamo,
+        doctores: [
+            { nombre: "Karina Paola Solis", horario: "Lunes a viernes de 09:00 a 14:30" },
+        ],
+    },
+    {
+        id: 23,
+        categoria: "estudio",
+        titulo: "Densitometría",
+        imagen: fotoDensitometria,
+        icono: iconoDensitometria,
+        doctores: [
+            { nombre: "", horario: "Lunes a viernes de 09:00 a 14:30" },
+        ],
     },
 ];
 
@@ -293,7 +422,9 @@ export const Especialidades = () => {
                                 {tarjeta.icono && <img src={tarjeta.icono} alt="" />}
                             </div>
 
-                            <h3>{tarjeta.titulo}</h3>
+                            <h3 style={tarjeta.colorTitulo ? { color: tarjeta.colorTitulo } : undefined}>
+                                {tarjeta.titulo}
+                            </h3>
 
                             <span>Ver más</span>
                         </article>
@@ -314,7 +445,9 @@ export const Especialidades = () => {
                                 {tarjeta.icono && <img src={tarjeta.icono} alt="" />}
                             </div>
 
-                            <h3>{tarjeta.titulo}</h3>
+                            <h3 style={tarjeta.colorTitulo ? { color: tarjeta.colorTitulo } : undefined}>
+                                {tarjeta.titulo}
+                            </h3>
 
                             <span>Ver más</span>
                         </article>
@@ -331,6 +464,7 @@ export const Especialidades = () => {
                     {OBRAS_SOCIALES.map((obra) => (
                         <li key={obra.nombre}>
                             <span className="obras-sociales-nombre">{obra.nombre}</span>
+                            {obra.completo && <span className="obras-sociales-detalle"> ({obra.completo})</span>}
                             {obra.detalle && <span className="obras-sociales-detalle"> — {obra.detalle}</span>}
                         </li>
                     ))}
@@ -350,12 +484,28 @@ export const Especialidades = () => {
                         <button type="button" className="informacion-cerrar" onClick={cerrarTarjeta} aria-label="Cerrar">×</button>
 
                         <div>
-                            <img src={abierta.imagen} alt="" />
                             <h2>{abierta.titulo}</h2>
-                            <p>{abierta.descripcion}</p>
+                            {abierta.descripcion && <p>{abierta.descripcion}</p>}
+                            <img src={abierta.imagen} alt="" />
+
+                            {abierta.doctores && (
+                                <ul className="informacion-doctores">
+                                    {abierta.doctores.map((doctor) => (
+                                        <li key={doctor.nombre || doctor.horario}>
+                                            <div className="informacion-doctor-fila">
+                                                <span className="informacion-doctor-nombre">{doctor.nombre}</span>
+                                                <span className="informacion-doctor-horario">{doctor.horario}</span>
+                                            </div>
+                                            {doctor.estudios && (
+                                                <p className="informacion-doctor-estudios">{doctor.estudios}</p>
+                                            )}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
 
                             <a
-                                href="https://v2.soloturnos.com/empresa/diagnome"
+                                href="https://v2.soloturnos.com/empresa/diagnomed"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="informacion-agenda"
