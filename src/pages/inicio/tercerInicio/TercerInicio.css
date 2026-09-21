@@ -245,3 +245,18 @@
         right: 1%;
     }
 }
+@media (min-width: 801px) {
+    .prueba-carrusel {
+        height: auto;
+        min-height: 70vh;
+        box-sizing: border-box;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+    }
+    .prueba-ventana,
+    .prueba-track,
+    .prueba-slide {
+        height: auto;
+    }
+}

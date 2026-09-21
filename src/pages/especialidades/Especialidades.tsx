@@ -383,7 +383,9 @@ const tarjetas: Tarjeta[] = [
     {
         id: 23,
         categoria: "estudio",
-        titulo: "Densitometría",
+        titulo: "Densitometría Ósea",
+        descripcion:
+            "Mide la densidad de tus huesos de forma simple e indolora. \n Ayuda a detectar a tiempo la pérdida de calcio y prevenir la osteoporosis.",
         imagen: fotoDensitometria,
         icono: iconoDensitometria,
         doctores: [

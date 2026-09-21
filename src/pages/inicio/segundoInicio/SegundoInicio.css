@@ -58,3 +58,16 @@
         width: 100%;
     }
 }
+
+@media (min-width: 801px) {
+    #texto {
+        height: auto;
+        min-height: 40vh;
+        box-sizing: border-box;
+        padding: 30px 0;
+    }
+    #texto h1 {
+        width: clamp(20%, 340px, 30%);
+        line-height: 1.25;
+    }
+}

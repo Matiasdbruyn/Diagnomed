@@ -46,7 +46,6 @@ export const ComunidadReels = () => {
         <section className="reels">
             <p className="reels-label">Instagram</p>
             <h2 className="reels-titulo">Mirá nuestros últimos reels</h2>
-            <p className="reels-subtitulo">Contenido, novedades y toda la info del centro.</p>
 
             <div className="reels-carrusel">
                 <button

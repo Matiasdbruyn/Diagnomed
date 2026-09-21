@@ -262,3 +262,40 @@
         height: 32vh;
     }
 }
+@media (min-width: 801px) {
+    .parent {
+        height: max(85vh, 520px);
+    }
+    .div1 {
+        container-type: size;
+        padding: min(50px, 6vh) min(50px, 3.5vw);
+        --ajuste: calc(-18px + 11cqh + 9cqw);
+    }
+    .div1 h1 {
+        font-size: clamp(26px, min(10.7px + 4.78vw, var(--ajuste)), 80px);
+    }
+    .div1 p {
+        font-size: clamp(15px, min(10.75px + 1.33vw, calc(var(--ajuste) * 0.375)), 30px);
+    }
+    .div2 {
+        container-type: size;
+        --ajuste: min(calc(-24px + 9.5cqh + 8.1cqw), calc(13px + 5.9cqw));
+    }
+    .div2 .reserva h1 {
+        font-size: clamp(22px, min(12.7px + 2.92vw, var(--ajuste)), 55px);
+        padding-left: min(50px, 3.5vw);
+    }
+    .div2 .reserva a {
+        font-size: clamp(15px, min(16px + 0.62vw, calc(var(--ajuste) * 0.4545)), 25px);
+    }
+    .div2 .donde {
+        padding-left: min(50px, 3.5vw);
+    }
+    .div2 .donde h2,
+    .div2 .donde p {
+        font-size: clamp(15px, min(14.6px + 1.06vw, calc(var(--ajuste) * 0.545)), 30px);
+    }
+    .carrusel-container {
+        contain: size;
+    }
+}
