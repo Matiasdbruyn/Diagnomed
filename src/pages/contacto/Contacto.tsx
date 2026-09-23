@@ -28,7 +28,7 @@ const FAQS: Faq[] = [
     {
         pregunta: "¿Qué obras sociales aceptan?",
         respuesta:
-            "Trabajamos con IOMA (100% de cobertura), OSPIT (Obra Social del Personal de la Industria Textil), PROSAL, PAMI (solo para ecografías y radiografías) y OSPTV (Obra Social del Personal de Televisión). También atendemos de manera particular. Ante la duda, escribinos por WhatsApp y te confirmamos tu cobertura.",
+            "Trabajamos con IOMA (100% de cobertura), OSPIT (Obra Social del Personal de la Industria Textil), PROSAL, PAMI (ecografías, mamografías, radiografías, doppler cardíaco, periférico y de vasos de cuello) y OSPTV (Obra Social del Personal de Televisión). También atendemos de manera particular. Ante la duda, escribinos por WhatsApp y te confirmamos tu cobertura.",
     },
     {
         pregunta: "¿Necesito orden médica para sacar un turno?",

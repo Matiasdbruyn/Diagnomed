@@ -16,7 +16,8 @@ const slides = [
             "Consulta ginecológica",
             "Colposcopía y Papanicolau",
             "Mamografía",
-            "Ecografía mamaria y axilar",
+            "Ecografía mamaria",
+            "Ecografía transvaginal / Densitometría ósea",
         ],
     },
     {

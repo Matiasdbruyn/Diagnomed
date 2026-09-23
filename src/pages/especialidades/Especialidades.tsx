@@ -56,7 +56,7 @@ const OBRAS_SOCIALES: ObraSocial[] = [
     { nombre: "IOMA", detalle: "100% de cobertura" },
     { nombre: "OSPIT", completo: "Obra Social del Personal de la Industria Textil" },
     { nombre: "PROSAL" },
-    { nombre: "PAMI", detalle: "solo para ecografías y radiografías" },
+    { nombre: "PAMI", detalle: "Ecografías, mamografías, radiografías, doppler cardíaco, periférico y de vasos de cuello" },
     { nombre: "OSPTV", completo: "Obra Social del Personal de Televisión" },
     { nombre: "Atención de manera particular" },
 ];
@@ -67,6 +67,7 @@ type Doctor = {
     nombre: string;
     horario: string;
     estudios?: string;
+    nota?: string;
 };
 
 type Tarjeta = {
@@ -209,7 +210,7 @@ const tarjetas: Tarjeta[] = [
         imagen: fotoFlebologia,
         icono: iconoFlebologia,
         doctores: [
-            { nombre: "María Laura Campanelli", horario: "Consultanos el horario por WhatsApp" },
+            { nombre: "María Laura Campanelli", horario: "Martes de 10:00 a 13:00" },
         ],
     },
     {
@@ -233,7 +234,9 @@ const tarjetas: Tarjeta[] = [
         imagen: fotoKinesiologia,
         icono: iconoKine,
         doctores: [
-            { nombre: "Garavaglia Selene Zoe", horario: "Martes y jueves de 09:20 a 15:40, y lunes, miércoles y viernes de 09:00 a 13:30" },
+            { nombre: "Sebastián Fernández", horario: "Lunes, miércoles y viernes de 09:00 a 13:00" },
+            { nombre: "Ariana Salina", horario: "Martes y jueves de 09:20 a 15:00" },
+            { nombre: "Garavaglia Selene Zoe", nota: "De licencia", horario: "Martes y jueves de 09:20 a 15:40, \n y lunes, miércoles y viernes de 09:00 a 13:30" },
         ],
     },
 
@@ -495,7 +498,15 @@ export const Especialidades = () => {
                                     {abierta.doctores.map((doctor) => (
                                         <li key={doctor.nombre || doctor.horario}>
                                             <div className="informacion-doctor-fila">
-                                                <span className="informacion-doctor-nombre">{doctor.nombre}</span>
+                                                <span className="informacion-doctor-nombre">
+                                                    {doctor.nombre}
+                                                    {doctor.nota && (
+                                                        <>
+                                                            {" "}
+                                                            <span className="informacion-doctor-nota">{doctor.nota}</span>
+                                                        </>
+                                                    )}
+                                                </span>
                                                 <span className="informacion-doctor-horario">{doctor.horario}</span>
                                             </div>
                                             {doctor.estudios && (
