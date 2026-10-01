@@ -62,6 +62,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
 }
 
 .div2 .reserva h1 {
@@ -71,7 +73,7 @@
     font-weight: 100;
     line-height: 1.1;
     text-align: left;
-    padding-left: 50px;
+    width: 100%;
 }
 
 .div2 .reserva a {
@@ -87,7 +89,7 @@
     border: none;
     background-color: #ffff;
     color: #008E80;
-    width: 80%;
+    width: 100%;
 }
 
 .div2 .donde {
@@ -208,11 +210,11 @@
         display: none;
     }
     .div2 .reserva {
-        padding: 24px 0;
+        padding: 24px;
         gap: 20px;
     }
     .div2 .reserva h1 {
-        padding-left: 24px;
+        text-align: center;
     }
     .div2 .donde {
         padding: 24px;
@@ -247,11 +249,11 @@
         display: none;
     }
     .div2 .reserva {
-        padding: 20px 0;
+        padding: 20px;
         gap: 16px;
     }
     .div2 .reserva h1 {
-        padding-left: 20px;
+        text-align: center;
     }
     .div2 .donde {
         padding: 20px;
@@ -269,31 +271,15 @@
     .div1 {
         container-type: size;
         padding: min(50px, 6vh) min(50px, 3.5vw);
-        --ajuste: calc(-18px + 11cqh + 9cqw);
-    }
-    .div1 h1 {
-        font-size: clamp(26px, min(10.7px + 4.78vw, var(--ajuste)), 80px);
-    }
-    .div1 p {
-        font-size: clamp(15px, min(10.75px + 1.33vw, calc(var(--ajuste) * 0.375)), 30px);
     }
     .div2 {
         container-type: size;
-        --ajuste: min(calc(-24px + 9.5cqh + 8.1cqw), calc(13px + 5.9cqw));
     }
-    .div2 .reserva h1 {
-        font-size: clamp(22px, min(12.7px + 2.92vw, var(--ajuste)), 55px);
-        padding-left: min(50px, 3.5vw);
-    }
-    .div2 .reserva a {
-        font-size: clamp(15px, min(16px + 0.62vw, calc(var(--ajuste) * 0.4545)), 25px);
+    .div2 .reserva {
+        padding: 0 min(50px, 3.5vw);
     }
     .div2 .donde {
         padding-left: min(50px, 3.5vw);
-    }
-    .div2 .donde h2,
-    .div2 .donde p {
-        font-size: clamp(15px, min(14.6px + 1.06vw, calc(var(--ajuste) * 0.545)), 30px);
     }
     .carrusel-container {
         contain: size;

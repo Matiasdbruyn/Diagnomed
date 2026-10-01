@@ -13,7 +13,7 @@ import { WhatsappFlotante } from './whatsapp/WhatsappFlotante'
 function App() {
 
   return (
-    <BrowserRouter basename="/Diagnomed">
+    <BrowserRouter basename="/">
       <ScrollToTop />
       <Header />
       <Routes>

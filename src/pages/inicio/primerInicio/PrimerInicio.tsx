@@ -1,4 +1,5 @@
 import "./PrimerInicio.css";
+import { useAutoFitText } from "../../../hooks/useAutoFitText";
 import entrada from "../../../assets/entrada.jpg";
 import esquina from "../../../assets/esquina.jpg";
 import ioma from "../../../assets/ioma.jpeg";
@@ -7,6 +8,9 @@ import cartel from "../../../assets/cartel.jpeg";
 import adentro from "../../../assets/adentro.jpg";
 
 export const PrimerInicio = () => {
+    useAutoFitText(".div1", "h1,p");
+    useAutoFitText(".div2", ".reserva h1,.reserva a,.donde h2,.donde p");
+
     return (
         <div className="parent">
 
