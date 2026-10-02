@@ -9,7 +9,11 @@ import adentro from "../../../assets/adentro.jpg";
 
 export const PrimerInicio = () => {
     useAutoFitText(".div1", "h1,p");
-    useAutoFitText(".div2", ".reserva h1,.reserva a,.donde h2,.donde p");
+    // El título y "¿Dónde?" se achican juntos para entrar en el alto de la caja.
+    useAutoFitText(".div2", ".reserva h1,.donde h2,.donde p");
+    // El botón se achica aparte: lo único que necesita es no partirse en dos
+    // líneas, así que no tiene que arrastrar al título a su mismo tamaño.
+    useAutoFitText(".reserva", "a");
 
     return (
         <div className="parent">

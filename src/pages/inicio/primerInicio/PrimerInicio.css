@@ -60,16 +60,16 @@
     border-radius: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 30px 50px;
     box-sizing: border-box;
 }
 
 .div2 .reserva h1 {
     color: #ffff;
     font-family: "Archivo Narrow", sans-serif;
-    font-size: clamp(22px, 12.7px + 2.92vw, 55px);
+    font-size: clamp(22px, 8px + 2.1vw, 42px);
     font-weight: 100;
     line-height: 1.1;
     text-align: left;
@@ -77,19 +77,29 @@
 }
 
 .div2 .reserva a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
     box-sizing: border-box;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     font-family: "Archivo", sans-serif;
     font-size: clamp(18px, 16px + 0.62vw, 25px);
-    padding: 10px;
+    white-space: nowrap;
+    padding: 10px min(18px, 7%);
     border-radius: 50px;
     border: none;
     background-color: #ffff;
     color: #008E80;
-    width: 100%;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.div2 .reserva a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
 }
 
 .div2 .donde {
@@ -276,7 +286,7 @@
         container-type: size;
     }
     .div2 .reserva {
-        padding: 0 min(50px, 3.5vw);
+        padding: min(30px, 4vh) min(50px, 3.5vw);
     }
     .div2 .donde {
         padding-left: min(50px, 3.5vw);

@@ -21,7 +21,12 @@ export const useAutoFitText = (
 
         const cabeOk = () =>
             container.scrollHeight <= container.clientHeight + 1 &&
-            container.scrollWidth <= container.clientWidth + 1;
+            container.scrollWidth <= container.clientWidth + 1 &&
+            // chequeo extra por elemento: cuando un hijo fuerza una sola línea
+            // (white-space: nowrap, como el botón) puede desbordar de costado
+            // sin que ese desborde se note en el contenedor (queda tapado por
+            // la caja de al lado en vez de agrandar el scrollWidth del padre).
+            targets.every((el) => el.scrollWidth <= el.clientWidth + 1);
 
         const aplicar = (escala: number, bases: number[]) => {
             targets.forEach((el, i) => {
@@ -36,7 +41,7 @@ export const useAutoFitText = (
             aplicar(1, bases);
             if (cabeOk()) return;
 
-            let min = 0.3;
+            let min = 0.55;
             let max = 1;
             for (let i = 0; i < 16; i++) {
                 const medio = (min + max) / 2;
@@ -52,6 +57,12 @@ export const useAutoFitText = (
         };
 
         ajustar();
+
+        // Las tipografías propias (Archivo, Archivo Narrow) tardan un toque en
+        // cargar. La primera medición puede hacerse todavía con la tipografía
+        // de reemplazo del sistema (más ancha), así que recalculamos de nuevo
+        // apenas terminan de cargar, para no quedarnos achicados de más.
+        document.fonts.ready.then(ajustar);
 
         const observer = new ResizeObserver(ajustar);
         observer.observe(container);
