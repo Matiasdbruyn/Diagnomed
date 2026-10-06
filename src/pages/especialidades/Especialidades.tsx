@@ -489,7 +489,9 @@ export const Especialidades = () => {
                         <button type="button" className="informacion-cerrar" onClick={cerrarTarjeta} aria-label="Cerrar">×</button>
 
                         <div>
-                            <h2>{abierta.titulo}</h2>
+                            <h2 style={abierta.colorTitulo ? { color: abierta.colorTitulo } : undefined}>
+                                {abierta.titulo}
+                            </h2>
                             {abierta.descripcion && <p>{abierta.descripcion}</p>}
                             <img src={abierta.imagen} alt="" />
 

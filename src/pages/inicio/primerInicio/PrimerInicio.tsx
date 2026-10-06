@@ -9,19 +9,19 @@ import adentro from "../../../assets/adentro.jpg";
 
 export const PrimerInicio = () => {
     useAutoFitText(".div1", "h1,p");
-    // El título y "¿Dónde?" se achican juntos para entrar en el alto de la caja.
-    useAutoFitText(".div2", ".reserva h1,.donde h2,.donde p");
-    // El botón se achica aparte: lo único que necesita es no partirse en dos
-    // líneas, así que no tiene que arrastrar al título a su mismo tamaño.
+    // Cada caja se ajusta por su cuenta, así lo que le pasa a una (por ejemplo
+    // la dirección, que no puede partirse) no le achica el texto a las otras.
+    useAutoFitText(".reserva", "h1");
     useAutoFitText(".reserva", "a");
+    useAutoFitText(".donde", "h2,p");
 
     return (
         <div className="parent">
 
             <div className="div1">
                 <h1>Cuidamos tu salud de manera integral</h1>
-                <p>Somos un <span>centro médico en Ramos Mejía </span><br />
-                    donde vas a encontrar todas las especialidades <br />
+                <p>Somos un <span>centro médico en Ramos Mejía </span>
+                    donde vas a encontrar todas las especialidades
                     y estudios que necesitás.
                 </p>
             </div>
@@ -29,7 +29,7 @@ export const PrimerInicio = () => {
             <div className="div2">
 
                 <div className="reserva">
-                    <h1>Tus chequeos médicos y más</h1>
+                    <h1>Tus chequeos <br />médicos y más</h1>
                     <a
                         href="https://v2.soloturnos.com/empresa/diagnomed"
                         target="_blank"

@@ -60,7 +60,9 @@
     border-radius: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* título y botón juntos y centrados en la caja, sin un hueco enorme en el medio */
+    justify-content: center;
+    gap: 16px;
     align-items: center;
     padding: 30px 50px;
     box-sizing: border-box;
@@ -74,6 +76,11 @@
     line-height: 1.1;
     text-align: left;
     width: 100%;
+}
+
+/* el salto de renglón solo se usa en escritorio; en celular el título va corrido */
+.div2 .reserva h1 br {
+    display: none;
 }
 
 .div2 .reserva a {
@@ -216,9 +223,6 @@
         grid-row: 3;
         grid-template-columns: 1fr;
     }
-    .div1 p br {
-        display: none;
-    }
     .div2 .reserva {
         padding: 24px;
         gap: 20px;
@@ -228,6 +232,11 @@
     }
     .div2 .donde {
         padding: 24px;
+        align-items: center;
+    }
+    .div2 .donde h2,
+    .div2 .donde p {
+        text-align: center;
     }
     .carrusel-container {
         grid-column: 1;
@@ -255,9 +264,6 @@
         grid-row: 3;
         grid-template-columns: 1fr;
     }
-    .div1 p br {
-        display: none;
-    }
     .div2 .reserva {
         padding: 20px;
         gap: 16px;
@@ -267,6 +273,11 @@
     }
     .div2 .donde {
         padding: 20px;
+        align-items: center;
+    }
+    .div2 .donde h2,
+    .div2 .donde p {
+        text-align: center;
     }
     .carrusel-container {
         grid-column: 1;
@@ -284,12 +295,52 @@
     }
     .div2 {
         container-type: size;
+        /* alto fijo: cada caja se queda en su lugar y su texto se achica solo */
+        grid-template-rows: minmax(0, 1fr);
     }
     .div2 .reserva {
-        padding: min(30px, 4vh) min(50px, 3.5vw);
+        padding: min(30px, 4vh) min(40px, 3vw);
+    }
+    /* siempre 2 renglones: "Tus chequeos" / "médicos y más" (el texto se achica para entrar) */
+    .div2 .reserva h1 {
+        white-space: nowrap;
+    }
+    .div2 .reserva h1 br {
+        display: inline;
+    }
+    .div2 .reserva a {
+        /* el botón arranca en el mismo borde izquierdo que el título */
+        align-self: flex-start;
+        font-size: clamp(14px, 10px + 0.6vw, 19px);
+        padding: 9px min(16px, 6%);
     }
     .div2 .donde {
-        padding-left: min(50px, 3.5vw);
+        padding: 0 min(28px, 2.4vw) 0 min(50px, 3.5vw);
+    }
+    .div2 .donde h2,
+    .div2 .donde p {
+        font-size: clamp(14px, 9.5px + 0.95vw, 25px);
+    }
+    /* cada renglón de la dirección tiene que entrar entero dentro de la caja */
+    .div2 .donde p {
+        white-space: nowrap;
+    }
+    /* ventana angosta (las dos cajas quedan muy finitas): menos margen lateral y la
+       dirección corre en varios renglones, así la letra no tiene que achicarse tanto */
+    @container (max-width: 470px) {
+        .div2 .reserva {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+        .div2 .donde {
+            padding: 0 12px 0 20px;
+        }
+        .div2 .donde p {
+            white-space: normal;
+        }
+        .div2 .donde p br {
+            display: none;
+        }
     }
     .carrusel-container {
         contain: size;
