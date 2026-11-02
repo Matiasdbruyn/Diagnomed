@@ -286,6 +286,24 @@
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
+/* especialidad sin turnos por el momento: aviso + botón de la agenda inhabilitado */
+.informacion-modal p.informacion-sin-turnos {
+    margin: 6px auto 0;
+    font-size: 16px;
+    color: #777;
+}
+
+.informacion-modal .informacion-agenda--deshabilitada {
+    background-color: #d9dfde;
+    color: #8c9695;
+    cursor: not-allowed;
+}
+
+.informacion-modal .informacion-agenda--deshabilitada:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 .informacion-modal div img {
     width: 100%;
     height: auto;

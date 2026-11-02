@@ -127,11 +127,11 @@
     }
     .descuento-imagen {
         order: -1;
-        height: 240px;
+        height: 280px;
     }
     .descuento-imagen img {
         border-radius: 0;
-        object-position: 50% 20%;
+        object-position: 50% 58%;
     }
     .descuento-texto {
         align-items: center;
@@ -154,10 +154,10 @@
         padding: 40px 0 0;
     }
     .descuento-imagen {
-        height: 200px;
+        height: 210px;
     }
     .descuento-imagen img {
-        object-position: 50% 26%;
+        object-position: 50% 52%;
     }
     .descuento-texto {
         padding: 28px 22px 32px;

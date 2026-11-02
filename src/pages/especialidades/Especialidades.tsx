@@ -79,6 +79,8 @@ type Tarjeta = {
     icono?: string;
     colorTitulo?: string;
     doctores?: Doctor[];
+    // sin turnos por el momento: se avisa y el botón de la agenda queda inhabilitado
+    sinTurnos?: boolean;
 };
 
 const tarjetas: Tarjeta[] = [
@@ -106,6 +108,7 @@ const tarjetas: Tarjeta[] = [
             { nombre: "Gabriel Osvaldo Orlandi", horario: "Jueves de 15:30 a 17:00" },
             { nombre: "Marilina Cabrera", horario: "Jueves de 09:00 a 13:00" },
             { nombre: "Luciana María Linale", horario: "Viernes de 14:00 a 16:00" },
+            { nombre: "Denise Yanet Chavez", horario: "Sábados de 09:00 a 12:40" },
         ],
     },
     {
@@ -185,9 +188,8 @@ const tarjetas: Tarjeta[] = [
         imagen: fotoPediatria,
         icono: iconoPediatria,
         colorTitulo: "#36D2E4",
-        doctores: [
-            { nombre: "Paula Agustina Castro", horario: "Lunes de 15:00 a 17:30" },
-        ],
+        doctores: [],
+        sinTurnos: true,
     },
     {
         id: 9,
@@ -495,7 +497,7 @@ export const Especialidades = () => {
                             {abierta.descripcion && <p>{abierta.descripcion}</p>}
                             <img src={abierta.imagen} alt="" />
 
-                            {abierta.doctores && (
+                            {abierta.doctores && abierta.doctores.length > 0 && (
                                 <ul className="informacion-doctores">
                                     {abierta.doctores.map((doctor) => (
                                         <li key={doctor.nombre || doctor.horario}>
@@ -519,14 +521,29 @@ export const Especialidades = () => {
                                 </ul>
                             )}
 
-                            <a
-                                href="https://v2.soloturnos.com/empresa/diagnomed"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="informacion-agenda"
-                            >
-                                Revisá la agenda
-                            </a>
+                            {abierta.sinTurnos ? (
+                                <>
+                                    <p className="informacion-sin-turnos">
+                                        Por el momento no hay turnos disponibles para esta especialidad.
+                                    </p>
+                                    <button
+                                        type="button"
+                                        className="informacion-agenda informacion-agenda--deshabilitada"
+                                        disabled
+                                    >
+                                        Revisá la agenda
+                                    </button>
+                                </>
+                            ) : (
+                                <a
+                                    href="https://v2.soloturnos.com/empresa/diagnomed"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="informacion-agenda"
+                                >
+                                    Revisá la agenda
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>

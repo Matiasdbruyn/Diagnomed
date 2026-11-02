@@ -30,7 +30,7 @@ export const DescuentoPami = () => {
                 </div>
 
                 <div className="descuento-imagen">
-                    <img src={fotoDescuento} alt="Credencial de obra social sobre una orden médica" />
+                    <img src={fotoDescuento} alt="Persona mayor mostrando su credencial de PAMI" />
                 </div>
             </div>
         </section>

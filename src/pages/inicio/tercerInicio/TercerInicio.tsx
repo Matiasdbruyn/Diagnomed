@@ -19,6 +19,7 @@ const slides = [
             "Ecografía mamaria",
             "Ecografía transvaginal / Densitometría ósea",
         ],
+        video: "https://www.instagram.com/p/De9byQIP2Ti/",
     },
     {
         titulo: "Jornada de Chequeos Médicos",
@@ -34,6 +35,7 @@ const slides = [
             "Radiografía de tórax",
             "Ecografías abdominal y tiroides",
         ],
+        video: "https://www.instagram.com/p/Dd4Iwxbzexw/",
     },
 ];
 
@@ -138,6 +140,18 @@ export const TercerInicio = () => {
                                         ))}
                                     </ul>
                                 )}
+
+                                <a
+                                    className="jornada-boton"
+                                    href={slide.video}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M8 5v14l11-7z" fill="currentColor" />
+                                    </svg>
+                                    Mirá el video aquí
+                                </a>
 
                             </div>
                         </div>
