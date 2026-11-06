@@ -108,7 +108,7 @@ const tarjetas: Tarjeta[] = [
             { nombre: "Gabriel Osvaldo Orlandi", horario: "Jueves de 15:30 a 17:00" },
             { nombre: "Marilina Cabrera", horario: "Jueves de 09:00 a 13:00" },
             { nombre: "Luciana María Linale", horario: "Viernes de 14:00 a 16:00" },
-            { nombre: "Denise Yanet Chavez", horario: "Sábados de 09:00 a 12:40" },
+            { nombre: "Denise Yanet Chavez", horario: "Sábados a consultar" },
         ],
     },
     {
